@@ -70,9 +70,6 @@ class Account(object):
 		self.profile['date_of_birth'] = date_of_birth
 		self.profile['country'] = country
 
-		print(self.profile['name'])
-
-
 
 
 	def edit_settings(self, name, date_of_birth, country, friends):
@@ -388,31 +385,6 @@ class Builder():
 	def vertex_f1(self, var1, var2, var5, var7, var11, var15, var17):
 
 		return var1.instance_f1(var2, var5, var7, var11, var15, var17)
-
-
-	def create_a_vertex_list(self, arg1):
-
-		var_vertex_list = []
-
-		var_vertex_list.append(arg1[1])
-
-		for item in arg1[1].__dict__['friends']:
-
-			if type(item) ==  list:
-
-				for item1 in item:
-
-					var_vertex_list.append(item1)
-
-
-			if type(item) != list:
-
-				var_vertex_list.append(item)
-
-
-
-		return var_vertex_list
-
 
 
 
