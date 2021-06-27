@@ -16,6 +16,42 @@ from datetime import date
 
 
 
+print("Welcome to AstroNet!")
+print("                                     *                                            ")
+print("                                    * *                                           ")
+print("                                   *   *                                          ")
+print("                                  *     *                                         ")
+print("                                 *       *                                        ")
+print("                                *         *                                       ")
+print("                               *           *                                      ")
+print("                              *             *                                     ")
+print("                             *               *                                    ")
+print("                            *                 *                                   ")
+print("   *   *   *   *   *    *                       *   *   *   *   *   *   *  *      ")
+print("     *                                                                  *         ")
+print("       *                                                              *           ")
+print("        *                                                           *             ")
+print("          *                                                       *               ")
+print("            *                                                   *                 ")
+print("              *                                               *                   ")
+print("                *                                           *                     ")
+print("                  *                                       *                       ")
+print("                  *                                       *                       ")
+print("                 *                                         *                      ")
+print("                *                                           *                     ")
+print("               *                     *                       *                    ")
+print("              *                 *         *                   *                   ")
+print("             *              *                 *                *                  ")
+print("            *           *                         *             *                 ")
+print("           *        *                                 *          *                ")
+print("          *     *                                         *       *               ")
+print("         *   *                                                *    *              ")
+print("        * *                                                       * *             ")
+
+
+
+
+
 class Account(object):
 
 
@@ -25,8 +61,7 @@ class Account(object):
 		self.profile = {'name':name, 'date_of_birth':date_of_birth, "country":country}
 		self.friends = [friends]
 		self.settings = {'private_profile':False, 'receive_messages':True, 'receive_emails':True}
-		self.session = None #{active:yes}
-
+		self.session = None 
 
 
 	def build_profile(self, name, date_of_birth, country):
@@ -52,13 +87,7 @@ class Account(object):
 
 				self.settings = Settings.settings_var 
 
-				Account.__init__(self, name, date_of_birth, country, friends)
-
-				#use super for inheritance of the attributes of a class 
-
-				#super(Account, self).__init__()  
-
-
+				Account.__init__(self, name, date_of_birth, country, friends) 
 
 
 			def edit_privacy_settings(self, arg):
@@ -66,10 +95,6 @@ class Account(object):
 				Settings.settings_var['private_profile'] = arg
 
 				Account.settings = self.settings = Settings.settings_var
-
-				print("var1:", Account.settings)
-
-				print("var2:", self.settings)
 
 				return Account.settings, self.settings
 
@@ -112,9 +137,6 @@ class Message(Account):
 
 		self.message_text = {'Title':title, 'Message_content':message_content}
 
-		print(self.friends)
-
-		print(self.messages)
 
 	def send_message_to_a_friend_from_the_same_network(self, arg1, arg2):
 
@@ -143,8 +165,6 @@ class Friend(Account):
 
 	def __init__(self, name, date_of_birth, country, friends):
 
-		#the attributes from the __init__ method of account are inherited
-
 		super(Friend,self).__init__(name, date_of_birth, country, friends) 
 
 		print(self.friends)
@@ -152,24 +172,11 @@ class Friend(Account):
 
 	def add_friends_from_the_same_network(self, name, date_of_birth, country, friends):
 
-			#check if the arguments match the data of the friends from the same network
-
-	
-
 			class Friends_network(Friend):
-
 
 				def __init__(self):
 
-					#print(self.friends)
-
-					#to access self.friends from the Friend class
-					
 					Friend.__init__(self, name, date_of_birth, country, friends)
-
-					#the attributes of Friend are accessed through the Account class
-
-					print(self.profile['name'])
 
 					self.friends.append(self.profile['name'])
 
@@ -203,16 +210,8 @@ class Friend(Account):
 
 
 			def __init__(self):
-
-				#print(self.friends)
-
-				#to access self.friends from the Friend class
 				
 				Friend.__init__(self, name, date_of_birth, country, friends)
-
-				#the attributes of Friend are accessed through the Account class
-
-				print(self.profile['name'])
 
 				self.friends.append(self.profile['name'])
 
@@ -225,7 +224,6 @@ class Friend(Account):
 
 
 			def display_friends_list(self):
-
 
 				return self.friends
 
@@ -291,47 +289,6 @@ class Graph():
 	def build_graph(self, arg1):
 
 		self.graph.append(arg1)
-
-
-
-
-
-
-
-print("Welcome to astro net!")
-print("                                     *                                            ")
-print("                                    * *                                           ")
-print("                                   *   *                                          ")
-print("                                  *     *                                                                    ")
-print("                                 *       *                                        ")
-print("                                *         *                                       ")
-print("                               *           *                                      ")
-print("                              *             *                                     ")
-print("                             *               *                                    ")
-print("                            *                 *                                   ")
-print("   *   *   *   *   *    *                       *   *   *   *   *   *   *  *      ")
-print("     *                                                                  *         ")
-print("       *                                                              *           ")
-print("        *                                                           *             ")
-print("          *                                                       *               ")
-print("            *                                                   *                 ")
-print("              *                                               *                   ")
-print("                *                                           *                     ")
-print("                  *                                       *                       ")
-print("                  *                                       *                       ")
-print("                 *                                         *                      ")
-print("                *                                           *                     ")
-print("               *                     *                       *                    ")
-print("              *                 *         *                   *                   ")
-print("             *              *                 *                *                  ")
-print("            *           *                         *             *                 ")
-print("           *        *                                 *          *                ")
-print("          *     *                                         *       *               ")
-print("         *   *                                                *    *              ")
-print("        * *                                                       * *             ")
-
-
-
 
 
 
@@ -571,12 +528,8 @@ class Builder():
 
 						if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 						and 'friends' not in item1.__dict__):
-
-							print("******")
 									
 							for friend1 in item1.__dict__['vertex']['friends']:
-
-								print("Friends list2: ", friend1)
 
 								var_friends_of_friends.append(friend1)
 
@@ -584,8 +537,6 @@ class Builder():
 
 						if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 						and 'friends' in item1.__dict__):
-
-							print("Len:", len(item1.__dict__['friends']))
 
 							for friend1 in item1.__dict__['friends']:
 
@@ -602,9 +553,7 @@ class Builder():
 
 
 									
-				
-		print("var_initial_level", var_initial_level)
-
+			
 		return  (var_initial_level, var_friends_of_friends)
 
 
@@ -658,8 +607,6 @@ class First(Account):
 
 	def __init__(self, name, date_of_birth, country, friends):
 
-		#the attributes from the __init__ method of account are inherited
-
 		super(First,self).__init__(name, date_of_birth, country, friends) 
 
 		print(self.friends)
@@ -667,17 +614,11 @@ class First(Account):
 
 	def add_friends_from_the_same_network(self, name, date_of_birth, country, friends, arg1, arg2):
 
-			#check if the arguments match the data of the friends from the same network
-
 		    class Friends_network(Friend):
 
 	    		 def __init__(self):
 
-	    		 	Friend.__init__(self, name, date_of_birth, country, friends) #arg1,arg2)
-
-	    		    #the attributes of Friend are accessed through the Account class
-
-
+	    		 	Friend.__init__(self, name, date_of_birth, country, friends) 
 	    		 	self.f1 = Builder.f1
 
 
@@ -685,11 +626,9 @@ class First(Account):
 
 	    		 		self.friends.append(self.profile['name'])
 
-	    		 		print("Friends list 7: ", self.friends)
-
 	    		 		for item in self.friends:
 
-	    		 			print("Item 7:", item)
+	    		 			print(item)
 
 			
 		    friends_network = Friends_network()
@@ -723,11 +662,6 @@ AdjVertex.builder_function_5 = Builder.builder_function_5
 First.add_friends = Friend.add_friends
 
 First.add_yourself_to_the_list_of_friends = Friend.add_yourself_to_the_list_of_friends
-
-#if condition:
-
-	#Friend.add_friends_from_the_same_network = First.add_friends_from_the_same_network
-
 
 
 
