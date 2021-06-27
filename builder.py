@@ -659,7 +659,7 @@ vertex3_1 = var_builder1.vertex(vertex3)
 
 vertex4_1 = var_builder1.vertex(vertex4)
 
-vertex5_1 = var_builder.vertex(vertex5)
+vertex5_1 = var_builder1.vertex(vertex5)
 
 
 graph_var.add_edge_f1_2(graph_var, vertex1_1[1], vertex2_1[1]) 
