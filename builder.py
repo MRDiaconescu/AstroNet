@@ -637,7 +637,7 @@ First.add_friends = Friend.add_friends
 First.add_yourself_to_the_list_of_friends = Friend.add_yourself_to_the_list_of_friends
 
 
-var_builder = Builder()
+var_builder1 = Builder()
 
 graph_var = Graph(15)
 
