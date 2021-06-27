@@ -628,12 +628,55 @@ AdjVertex.builder_function_2 = Builder.builder_function_2
 
 AdjVertex.builder_function_5 = Builder.builder_function_5
 
-
-
-
 First.add_friends = Friend.add_friends
 
 First.add_yourself_to_the_list_of_friends = Friend.add_yourself_to_the_list_of_friends
+
+
+var_builder = Builder()
+
+graph_var = Graph(15)
+
+v1=v2=v3=v4=v5=v6=v7=v8=v9=v10=v11=v12=None
+
+vertex1 = var_builder1.instance_f1(v1, Friend, "M2", date(1995,10,9), "CH", "Q")
+vertex2 = var_builder1.instance_f1(v2, Friend, "N1", date(1995,10,9), "Nl", "Q")
+vertex3 = var_builder1.instance_f1(v3, Friend, "N2", date(1995,10,9), "BE", "Q")
+vertex4 = var_builder1.instance_f1(v4, Friend, "Q7", date(1995,10,9), "Nl", "Q")
+vertex5 = var_builder1.instance_f1(v5, Friend, "M5", date(1995,10,9), "BE", "Q")
+
+
+
+vertex1_1 = var_builder1.vertex(vertex1)
+
+vertex2_1 = var_builder1.vertex(vertex2)
+
+vertex3_1 = var_builder1.vertex(vertex3)
+
+vertex4_1 = var_builder1.vertex(vertex4)
+
+vertex5_1 = var_builder.vertex(vertex5)
+
+
+graph_var.add_edge_f1_2(graph_var, vertex1_1[1], vertex2_1[1]) 
+
+var1=Friend(vertex1_1, date(1995,10,9), "CH", vertex2_1)
+
+print(var1)
+
+var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex2_1[1], date(1995,10,9), "CH")
+
+var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex3_1[1], date(1995,10,9), "")
+
+
+
+
+
+
+
+
+
+
 
 
 
