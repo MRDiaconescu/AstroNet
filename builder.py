@@ -168,6 +168,10 @@ class Friend(Account):
 
 
 	def add_friends_from_the_same_network(self, name, date_of_birth, country, friends):
+		
+			#class which calls another class which calls another class
+
+			#using specific attributes from the initial class
 
 			class Friends_network(Friend):
 
@@ -666,8 +670,9 @@ print(var1)
 
 var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex2_1[1], date(1995,10,9), "CH")
 
-var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex3_1[1], date(1995,10,9), "")
+var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex3_1[1], date(1995,10,9), "NL")
 
+var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex4_1[1], date(1995,10,9), "BE")
 
 
 
