@@ -512,6 +512,19 @@ class Builder():
 
 
 		return var_graph
+	
+	
+	
+	
+	def add_a_friend_to_the_joined_network(self, arg1, arg2):
+
+		for item in arg1.graph: 
+		
+			if arg2 not in arg1.graph:
+
+				arg1.build_graph(arg2)
+
+		return arg1.graph
 
 
 
