@@ -440,15 +440,24 @@ class Builder():
 
 		var_graph = Graph(len(args_list))
 
+		var_graph_list = []
+
 		for item in range(len(args_list)):
 
 			var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
+			print(args_list[0].next)
+
+			print(args_list[0].next.__dict__)
+
+			var_graph_list.append(args_list[0].next)
+
 			var_graph.build_graph(args_list[0].next)
 
-		return var_graph
+		return (var_graph, var_graph_list)
 
 
+	
 
 	def display_the_graph(self, arg1):
 
@@ -459,6 +468,50 @@ class Builder():
 			if item != None:
 
 				print(item.__dict__)
+
+				
+
+	def create_networks(self, arg1, arg2, arg5):
+
+		print("Graph")
+
+		args_list = []
+
+		var_graph_list = []
+
+		for item in arg1.create_a_vertex_list_f1(arg2):
+
+			print(item)
+			print(item.__dict__)
+
+
+			for item1 in  arg1.create_a_vertex_list_f1(arg5):
+
+				print(item1)
+				print(item1.__dict__)
+
+				if item.__dict__['vertex']['name'] == item1.__dict__['vertex']['name']:
+					
+					args_list.append(item)
+
+		var_graph = Graph(len(args_list))
+
+		for item in range(len(args_list)):
+
+		    print(args_list[item].__dict__)
+
+		    var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
+
+		    print(args_list[0].next)
+
+		    print(args_list[0].next.__dict__)
+
+		    var_graph_list.append(args_list[0].next)
+
+		    var_graph.build_graph(args_list[0].next)
+
+
+		return var_graph
 
 
 
