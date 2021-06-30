@@ -591,10 +591,7 @@ class Builder():
 
 								else:
 
-									pass
-
-
-									
+									pass							
 			
 		return  (var_initial_level, var_friends_of_friends)
 
@@ -817,6 +814,12 @@ var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex2_1[1], d
 var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex3_1[1], date(1995,10,9), "NL")
 
 var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex4_1[1], date(1995,10,9), "BE")
+
+var_cell = 7
+
+var_shell = 77
+
+var_medium = 777
 
 var_nest_cell = NestCell(var_cell, var_shell, var_medium)
 var_nest_cell1 = var_nest_cell.Gate1().build_the_nest_cell(var_cell, var_shell, var_medium)
