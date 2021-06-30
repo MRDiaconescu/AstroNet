@@ -818,4 +818,30 @@ var2 = var_builder1.builder_function(var_builder1, vertex1_1[1], vertex4_1[1], d
 
 
 
+var_cell = 7
 
+var_shell = 77
+
+var_medium = 777
+var_nest_cell = NestCell(var_cell, var_shell, var_medium)
+
+var_nest_cell1 = var_nest_cell.Gate1().build_the_nest_cell(var_cell, var_shell, var_medium)
+vertex5 = var_nest_cell1.instance_f1(v5, Friend, "M5", date(1995,10,9), "CH", "Q")
+vertex6 = var_nest_cell1.instance_f1(v6, Friend, "R1", date(1995,10,9), "NL", "Q")
+vertex7 = var_nest_cell1.instance_f1(v7, Friend, "R2", date(1995,10,9), "BE", "Q")
+vertex8 = var_nest_cell1.instance_f1(v8, Friend, "R5", date(1995,10,9), "NL", "Q")
+
+print(vertex5)
+
+vertex5_1 = var_builder1.vertex(vertex5)
+
+vertex6_1 = var_builder1.vertex(vertex6)
+
+vertex7_1 = var_builder1.vertex(vertex7)
+
+vertex8_1 = var_builder1.vertex(vertex8)
+
+
+var_NestingHive1 = var_nest_cell1.NestingHive_function(var_nest_cell1, vertex5_1, vertex6_1, vertex7_1, vertex8_1)
+
+print(var_NestingHive1)
