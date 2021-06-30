@@ -678,7 +678,85 @@ class First(Account):
 		    return friends_network
 
 
+class NestCell(Builder):
 
+
+	def __init__(self, cell, shell, medium, link1=1, link2=2, link5=5, link7=7):
+
+		self.cell = cell
+		self.shell = shell
+		self.medium = {medium}
+
+		self.link1 = link1
+		self.link2 = link2
+		self.link5 = link5
+		self.link7 = link7
+
+		#the attributes from the __init__ method of Builder are inherited
+
+		super(NestCell, self).__init__(cell, shell) 
+
+
+	class Gate1():
+
+
+		def build_the_nest_cell(self, cell, shell, medium, link1=1, link2=2, link5=5, link7=7):
+
+			class NestingHive(NestCell):
+
+				def __init__(self):
+
+					#to access 
+
+					NestCell.__init__(self, cell, shell, medium)
+
+					#the attributes of NestCell are accessed through the Builder class
+
+				def build_the_hive_1(self, arg1):
+
+					for item in arg1:
+
+						self.medium.add(item)
+
+					return self		
+
+				def build_the_hive_2(self, arg1):
+
+					self.link1 = arg1
+
+					return self
+
+
+				def build_the_hive_2_1(self, arg2):
+
+					self.link2 = arg2
+
+					return self
+
+				def build_the_hive_5_1(self, arg5):
+
+					self.link5 = arg5
+
+					return self
+
+				def build_the_hive_7_1(self, arg7):
+
+					self.link7 = arg7
+
+					return self
+
+				def NestingHive_function(self, arg, arg1, arg2, arg5, arg7):
+
+					arg.build_the_hive_2(arg1)
+					arg.build_the_hive_2_1(arg2)
+					arg.build_the_hive_5_1(arg5)
+					arg.build_the_hive_7_1(arg7)
+
+					return arg
+
+			the_hive = NestingHive()
+
+			return the_hive
 
 
 	
