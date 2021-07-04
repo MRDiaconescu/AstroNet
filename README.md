@@ -1,6 +1,6 @@
 # AstroNet
 
-
+Before you copy and/or distribute this program against the terms stated in the license, please be aware of the consequences.
 
 This program illustrates a design pattern that uses the graph data structure and classes to create a robust network implementation.
 It comprises of multiple functions which are used in conjunction with each other to tighten the relations that exist between
@@ -11,7 +11,6 @@ and the system arranges the networks on its own, at a certain phase.
 
 The most important class is the Account class, which is used as a substrate for performing operations between networks and inside the graphs.
 
-Before you copy and/or distribute this program against the terms stated in the license, please be aware of the consequences.
 
 
 
