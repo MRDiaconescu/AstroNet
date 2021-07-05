@@ -11,6 +11,11 @@ and the system arranges the networks on its own, at a certain phase.
 
 The most important class is the Account class, which is used as a substrate for performing operations between networks and inside the graphs.
 
+The program follows a design pattern which has the structure of a labirinth and when the user thinks that the program has completely executed, 
+there are functions which interfere with the termination of the program and the user is found in the same place.
+
+
+
 
 
 
