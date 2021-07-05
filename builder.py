@@ -693,6 +693,10 @@ class NestCell(Builder):
 		super(NestCell, self).__init__(cell, shell) 
 
 
+	
+	
+	
+	
 	class Gate1():
 
 
@@ -749,6 +753,11 @@ class NestCell(Builder):
 					arg.build_the_hive_7_1(arg7)
 
 					return arg
+				
+				def canal(self):
+
+					return NestCell(self, cell, shell, medium).Gate1().build_the_nest_cell(self, cell, shell, medium)
+
 
 				
 				
@@ -757,6 +766,12 @@ class NestCell(Builder):
 			return the_hive
 
 	
+	class Gate2():
+
+		def path_function(self, cell, shell, medium, link1=1, link2=2, link5=5, link7=7):
+
+			return NestCell(cell, shell, medium).Gate1().build_the_nest_cell(self, cell, shell, medium).canal()
+
 
 
 
@@ -845,3 +860,13 @@ vertex8_1 = var_builder1.vertex(vertex8)
 var_NestingHive1 = var_nest_cell1.NestingHive_function(var_nest_cell1, vertex5_1, vertex6_1, vertex7_1, vertex8_1)
 
 print(var_NestingHive1)
+
+var_nest_cell7 = NestCell(var_cell, var_shell, var_medium)
+
+print(var_nest_cell7.Gate2())
+
+print(var_nest_cell7.Gate2().path_function(var_cell, var_shell, var_medium))
+
+print(var_nest_cell7.Gate1().build_the_nest_cell(var_cell, var_shell, var_medium).canal())
+
+
