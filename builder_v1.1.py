@@ -254,6 +254,8 @@ class AstroNet():
 				self.friend_link1 = friend_link1;
 
 				self.friend_link2 = friend_link2;
+				
+				print(self.friends)
 
 
 
@@ -434,8 +436,8 @@ class AstroNet():
 
 				arg1 = arg2(arg3, arg5, arg6, arg7)
 
-				return  arg1#(self.counter,arg1)
-
+				return  arg1
+			
 
 			def builder_function(self,arg1, arg2, arg3,arg5, arg6):
 
@@ -751,13 +753,13 @@ class AstroNet():
 
 			def __init__(self, name, date_of_birth, country, friends, first_link1=1, first_link2=2):
 
-				#the attributes from the __init__ method of account are inherited
-
 				super(AstroNet.Sphere.First,self).__init__(name, date_of_birth, country, friends) 
 
 				self.first_link1 = first_link1;
 
 				self.first_link2 = first_link2;
+				
+				print(self.friends)
 
 
 
@@ -772,8 +774,6 @@ class AstroNet():
 			    		 	self.friends_network_link1 = friends_network_link1;
 
 			    		 	self.friends_network_link2 = friends_network_link2;
-
-			    		    #the attributes of Friend are accessed through the Account class
 
 
 			    		 	self.f1 = AstroNet.Sphere.Builder.f1
