@@ -23,7 +23,7 @@ print("Welcome to astro net!")
 print("                                     *                                            ")
 print("                                    * *                                           ")
 print("                                   *   *                                          ")
-print("                                  *     *                                                                    ")
+print("                                  *     *                                         ")
 print("                                 *       *                                        ")
 print("                                *         *                                       ")
 print("                               *           *                                      ")
@@ -109,7 +109,6 @@ class AstroNet():
 
 
 
-
 			def edit_settings(self, name, date_of_birth, country, friends, settings_link1=1, settings_link2=2):
 
 
@@ -126,13 +125,6 @@ class AstroNet():
 
 						self.settings_link1 = settings_link1;
 						self.settings_link2 = settings_link2;
-
-						#use super for inheritance of the attributes of a class 
-
-						#super(Account, self).__init__()  
-
-
-
 
 					def edit_privacy_settings(self, arg):
 
@@ -189,13 +181,7 @@ class AstroNet():
 
 				for item in range(len(self.centralized_database)):
 
-					print("Item",item)
-
-					print(self.centralized_database[item])
-
 					for item1 in range(len(self.centralized_database[item])):
-
-						print(item1)
 
 						if self.centralized_database[item][item1] == []:
 
@@ -210,15 +196,7 @@ class AstroNet():
 							self.centralized_database[item][item1] = arg1
 
 
-							#print("list")
-
-						print("Counter", counter)
-
-							
-
-
-
-				#self.centralized_database.append(arg1)
+						
 
 				return self.centralized_database
 
@@ -239,9 +217,6 @@ class AstroNet():
 
 				self.message_link2 = message_link2;
 
-				print(self.friends)
-
-				print(self.messages)
 
 			def send_message_to_a_friend_from_the_same_network(self, arg1, arg2):
 
@@ -280,24 +255,14 @@ class AstroNet():
 
 				self.friend_link2 = friend_link2;
 
-				print("**********************************************************")
-
-				print(self.friends)
-
-				print("***********************************************************")
 
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends):
-
-					#check if the arguments match the data of the friends from the same network
-
 
 					class Friends_network(AstroNet.Sphere.Friend):
 
 
 						def __init__(self, friends_network_link1=1, friends_network_link2=2):
-
-							#print(self.friends)
 
 							#to access self.friends from the Friend class
 							
@@ -309,11 +274,7 @@ class AstroNet():
 
 							#the attributes of Friend are accessed through the Account class
 
-							print(self.profile['name'])
-
 							self.friends.append(self.profile['name'])
-
-							print("Friends list: ", self.friends)
 
 							for item in self.friends:
 
@@ -340,10 +301,7 @@ class AstroNet():
 
 				class Friends_network(AstroNet.Sphere.Friend):
 
-
 					def __init__(self, friends_network_link1=1, friends_network_link2=2):
-
-						#print(self.friends)
 
 						#to access self.friends from the Friend class
 						
@@ -355,13 +313,7 @@ class AstroNet():
 
 						#the attributes of Friend are accessed through the Account class
 
-						print(self.profile['name'])
-
 						self.friends.append(name)
-
-						#self.friends.append(self.profile['name'])
-
-						print("Friends list: ", self.friends)
 
 						for item in self.friends:
 
@@ -389,9 +341,6 @@ class AstroNet():
 
 
 
-
-		class Session():
-			pass
 		  
 		class AdjVertex():
 
@@ -463,8 +412,6 @@ class AstroNet():
 			
 			def build_the_friend_network_f1_A(self, arg1, arg2, arg3, arg5):
 
-				print("1st call")
-
 				arg1.friends = arg1.add_friends_from_the_same_network(arg2, arg3, arg5, arg1.friends).friends
 
 				return arg1.add_friends_from_the_same_network(arg1, arg2, arg5, arg1.friends).friends
@@ -472,8 +419,6 @@ class AstroNet():
 
 
 			def build_the_friend_network_f1_1_A(self, arg1, arg2, arg3, arg5):
-
-				print("1st call")
 
 				arg1.friends = arg1.add_friends_from_the_same_network(arg2, arg3, arg5, arg1.friends).friends
 
@@ -483,8 +428,6 @@ class AstroNet():
 
 			def build_the_friend_network_f1_B(self, arg1, arg2, arg3, arg5):
 
-				print("1st call")
-
 				arg1.friends = arg1.add_friends(arg2, arg3, arg5, arg1.friends).friends
 
 				return arg1.add_friends(arg1, arg2, arg5, arg1.friends).friends
@@ -492,8 +435,6 @@ class AstroNet():
 
 
 			def instance_f1(self,arg1, arg2, arg3, arg5, arg6, arg7):
-
-				#self.counter += 1
 
 				arg1 = arg2(arg3, arg5, arg6, arg7)
 
@@ -553,34 +494,6 @@ class AstroNet():
 				return var1.instance_f1(var2, var5, var7, var11, var15, var17)
 
 
-			def create_a_vertex_list(self, arg1):
-
-				var_vertex_list = []
-
-				var_vertex_list.append(arg1[1])
-
-				for item in arg1[1].__dict__['friends']:
-
-					if type(item) ==  list:
-
-						for item1 in item:
-
-							print("Value", item1)
-
-							var_vertex_list.append(item1)
-
-
-					if type(item) != list:
-
-						print("Value1:", item.__dict__)
-
-						var_vertex_list.append(item)
-
-
-
-				return var_vertex_list
-
-
 
 
 
@@ -598,25 +511,17 @@ class AstroNet():
 
 						for item1 in item:
 
-							print("Value", item1)
-
 							var_vertex_list.append(item1)
 
 
 					if type(item) != list:
 
-						print("Value1:", item.__dict__)
-
 						var_vertex_list.append(item)
 
-
-				#var_vertex_list1.append(arg1[1])
 
 				for i in var_vertex_list:
 
 					if type(i) == AstroNet.Sphere.AdjVertex:
-
-						print("Vertex", i.__dict__)
 
 						var_vertex_list1.append(i)
 
@@ -625,8 +530,6 @@ class AstroNet():
 						for item in range(len(i)):
 
 							if type(i[item]) != list:
-
-								print(i[item].__dict__)
 
 								var_vertex_list1.append(i[item])
 
@@ -645,17 +548,9 @@ class AstroNet():
 
 					var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
-					print("conn", args_list[0].next)
-
-					print("conn1", args_list[0].next.__dict__)
-
 					var_graph_list.append(args_list[0].next)
 
-					#var_graph.build_graph(args_list[0].next)
-
 					var_graph.graph = var_graph_list
-
-				#var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[1])
 
 				return (var_graph, var_graph_list)
 
@@ -682,48 +577,22 @@ class AstroNet():
 
 				for item in arg1.create_a_vertex_list_f1(arg2):
 
-					print("****Item****:", item)
-					print("****Item****:", item.__dict__)
-
-
 					for item1 in  arg1.create_a_vertex_list_f1(arg5):
 
-						print("****item1****", item1)
-						print("****Item1****:", item1.__dict__)
-
-
 						if item.__dict__['vertex']['name'] == item1.__dict__['vertex']['name']:
-
-							print()
-
-							print("^^^^^^^^^^^^^^^^^^^^Item^^^^^^^^^^^^^^^^^^^^", (item.__dict__))
 
 							args_list.append(item)
 
 				var_graph = AstroNet().Sphere().Graph(len(args_list))
 
-				#print("Graph")
-
-				print("Var graph", type(var_graph))
-
 				for item in range(len(args_list)):
 
-				    print("***********Arg*************:", args_list[item].__dict__)
-
 				    var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
-
-				    print("conn", args_list[0].next)
-
-				    print("conn1", args_list[0].next.__dict__)
 
 				    var_graph_list.append(args_list[0].next)
 
 				    var_graph.build_graph(args_list[0].next)
 
-				    #var_graph.graph = var_graph_list
-
-
-				#var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[1])
 
 				return var_graph
 
@@ -768,15 +637,11 @@ class AstroNet():
 
 							for friend in item.__dict__['vertex']['friends']:
 
-								print("Friends list1: ", friend)
-
 								var_initial_level.append(("Second level", friend))
 
 						elif 'friends' in item.__dict__:
 
 							for friend in item.__dict__['friends']:
-
-								print("Friends list1_1: ", friend)
 
 								var_initial_level.append(("Second level", friend))
 
@@ -791,19 +656,11 @@ class AstroNet():
 
 								var_initial_level.append(("Third level:", item1))
 
-								# for friend1 in item1.__dict__['friends']:
-
-								# 	print("Friends list2: ", friend1)
-
 
 								if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 								and 'friends' not in item1.__dict__):
-
-									print("******")
 											
 									for friend1 in item1.__dict__['vertex']['friends']:
-
-										print("Friends list2: ", friend1)
 
 										var_friends_of_friends.append(friend1)
 
@@ -812,17 +669,9 @@ class AstroNet():
 								if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 								and 'friends' in item1.__dict__):
 
-									print("*************")
-
-									print("Len:", len(item1.__dict__['friends']))
-
 									for friend1 in item1.__dict__['friends']:
 
 										if type(friend1) != list:
-
-											print("*******************")
-
-											print("Friends list2:", friend1.__dict__)
 
 											var_friends_of_friends.append(friend1)
 
@@ -836,8 +685,6 @@ class AstroNet():
 
 											
 						
-				print("var_initial_level", var_initial_level)
-
 				return  (var_initial_level, var_friends_of_friends)
 
 
@@ -898,24 +745,15 @@ class AstroNet():
 
 				self.first_link2 = first_link2;
 
-				print("**********************************************************")
-
-				print(self.friends)
-
-				print("***********************************************************")
 
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends, arg1, arg2):
-
-				    print("----------------------------------------------------")
-
-					#check if the arguments match the data of the friends from the same network
 
 				    class Friends_network(AstroNet.Sphere.Friend):
 
 			    		 def __init__(self, friends_network_link1=1, friends_network_link2=2):
 
-			    		 	AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends) #arg1,arg2)
+			    		 	AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends)
 
 			    		 	self.friends_network_link1 = friends_network_link1;
 
@@ -931,11 +769,9 @@ class AstroNet():
 
 			    		 		self.friends.append(self.profile['name'])
 
-			    		 		print("Friends list 7: ", self.friends)
-
 			    		 		for item in self.friends:
 
-			    		 			print("Item 7:", item)
+			    		 			print(item)
 
 					
 				    friends_network = Friends_network()
@@ -959,9 +795,6 @@ class AstroNet():
 
 				self.message_link2 = message_link2;
 
-				print(self.friends)
-
-				print(self.messages)
 
 			def add_friend_f1(self):
 
@@ -994,42 +827,14 @@ class AstroNet():
 
 							 	if ((item1.profile['date_of_birth'] == date_of_birth) and (item1.profile['country']==country)):
 
-							 		print("Found: ", item1)
+							 		print(item1)
 
-							 		print(1)
 							 		return item1
 
 						 	else:
 
 						 		pass
 
-			def send_message_to_a_friend_from_the_same_network(self, arg1, arg2):
-
-				counter = 0
-
-				if (arg2 in arg1.friends):
-
-					counter+=1
-
-					#arg2=counter
-
-					self.messages.append(self.message_text)
-
-				else:
-
-					print(arg2 + " is not a member of your friends network.")
-					answer =input("Would you like to add " + arg2 + " to your friends network? Type yes or no ")
-
-					print("True")
-
-					if (answer == "yes"):
-
-						arg1.add_friends(arg2, "1992, 7, 7", "NL", "Q")
-
-						print(arg2 + " is now your friend ")
-
-
-				return self.messages
 
 
 			def send_message_to_a_friend_from_the_same_network_f1(self, arg1, arg2):
@@ -1058,10 +863,6 @@ class AstroNet():
 						print(arg2.profile['name'] + " is now your friend ")
 
 						arg1.friends.append(friends_list)
-
-				print("Messages: ", self.messages)
-
-				print("Friends: ", friends_list)
 
 
 
@@ -1165,7 +966,6 @@ class AstroNet():
 
 							return AstroNet().Sphere().NestCell(self, cell, shell, medium).Gate1().build_the_nest_cell(self, cell, shell, medium)
 
-					#return self.network
 
 					the_hive = NestingHive()
 
@@ -1185,7 +985,7 @@ class AstroNet():
 					return AstroNet().Sphere().NestCell(cell, shell, medium).Gate1().build_the_nest_cell(self, cell, shell, medium).canal()
 
 
-		def connect(self, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10,arg11, arg12, arg15, arg17, arg25):
+		def connect(self, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg15, arg17, arg25):
 
 			self.link1 = arg1;
 			self.link2 = arg2;
