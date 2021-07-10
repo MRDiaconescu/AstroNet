@@ -209,7 +209,7 @@ class AstroNet():
 
 				self.friends = arg1.friends
 
-				self.messages = [ [dict({})] for item in range(len(arg1.friends))]
+				self.messages = [[dict({})] for item in range(len(arg1.friends))]
 
 				self.message_text = {'Title':title, 'Message_content':message_content}
 
@@ -246,8 +246,6 @@ class AstroNet():
 		class Friend(Account):
 
 			def __init__(self, name, date_of_birth, country, friends, friend_link1=1, friend_link2=2):
-
-				#the attributes from the __init__ method of account are inherited
 
 				super(AstroNet.Sphere.Friend,self).__init__(name, date_of_birth, country, friends) 
 
