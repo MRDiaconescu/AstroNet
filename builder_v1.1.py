@@ -869,6 +869,9 @@ class AstroNet():
 						print(arg2.profile['name'] + " is now your friend ")
 
 						arg1.friends.append(friends_list)
+						
+						self.messages.append(self.message_text)
+
 
 
 
@@ -1038,5 +1041,72 @@ AstroNet.Sphere.AdjVertex.builder_function_5 = AstroNet.Sphere.Builder.builder_f
 AstroNet.Sphere.First.add_friends = AstroNet.Sphere.Friend.add_friends
 
 AstroNet.Sphere.First.add_yourself_to_the_list_of_friends = AstroNet.Sphere.Friend.add_yourself_to_the_list_of_friends
+
+AstroNet.Sphere.Message.send_message_to_a_friend_from_the_same_network = AstroNet.Sphere.First_message.send_message_to_a_friend_from_the_same_network_f1
+
+
+
+
+var_cell = 7
+
+var_shell = 77
+
+var_medium = 777
+
+
+var_account = AstroNet().Sphere().Account("mara", date(1993,10,9), "NL", ["Q"]);
+
+var_settings = AstroNet().Sphere().Account("mara", date(1993,10,9), "NL", ["Q"]).edit_settings("mara", date(1993,10,9), "NL", ["Q"]);
+
+var_friend = AstroNet().Sphere().Friend("bravar", date(1995,10,9), "NL", "Q");
+
+var_friend1 = AstroNet().Sphere().Friend("mara", date(1993,10,9), "NL", "Q");
+
+var_account_1 = AstroNet().Sphere().Account("bravar", date(1995,10,9), "NL", var_friend.friends);
+
+var_message = AstroNet().Sphere().Message(var_friend, "Title1", "Hello");
+
+var_first_message = AstroNet().Sphere().First_message(var_friend, "Title1", "Hello");
+
+var_friends_network = var_friend1.add_friends(var_account_1, var_account_1.profile['date_of_birth'], var_account_1.profile['country'], var_account_1.friends)
+
+var_adjVertex = AstroNet().Sphere().AdjVertex(1)
+
+var_graph = AstroNet().Sphere().Graph(7)
+
+var_builder5 = AstroNet().Sphere().Builder()
+
+var_first = AstroNet().Sphere().First(var_account.profile['name'], var_account.profile['date_of_birth'], var_account.profile['country'], var_account.friends)
+
+var_nest_cell_35 = AstroNet().Sphere().NestCell(var_cell, var_shell, var_medium)
+
+var_gate1 = AstroNet().Sphere().NestCell(var_cell, var_shell, var_medium).Gate1()
+
+var_nestingHive2 = AstroNet().Sphere().NestCell(var_cell, var_shell, var_medium).Gate1().build_the_nest_cell(var_cell, var_shell, var_medium)
+
+var_gate2 = AstroNet().Sphere().NestCell(var_cell, var_shell, var_medium).Gate2()
+
+var_person = AstroNet().Sphere().Person()
+
+
+var_connections = AstroNet().Sphere().connect(var_account, var_settings, var_message, var_first_message, var_friend, var_friends_network, var_adjVertex, var_graph, var_builder5, var_person, var_first, var_nest_cell_35, var_gate1, var_nestingHive2, var_gate2)
+
+print(var_connections)
+
+print(var_connections.link1)
+
+print(var_connections.link2)
+
+print(var_connections.link5)
+
+var_message1 = AstroNet().Sphere().Message(var_friend, "Title1", "Hello")
+
+var_message1_1 = var_message.send_message_to_a_friend_from_the_same_network(var_friend, var_friend1)
+
+print(var_message1)
+
+print(var_friend.friends)
+
+print(var_message1_1)
 
 
