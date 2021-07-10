@@ -578,8 +578,14 @@ class AstroNet():
 				var_graph_list = []
 
 				for item in arg1.create_a_vertex_list_f1(arg2):
+					
+					print(item)
+					print(item.__dict__)
 
 					for item1 in  arg1.create_a_vertex_list_f1(arg5):
+						
+						print(item1)
+						print(item1.__dict__)
 
 						if item.__dict__['vertex']['name'] == item1.__dict__['vertex']['name']:
 
