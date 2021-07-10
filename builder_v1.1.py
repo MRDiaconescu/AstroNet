@@ -526,6 +526,8 @@ class AstroNet():
 						for item in range(len(i)):
 
 							if type(i[item]) != list:
+								
+								print(i[item].__dict__)
 
 								var_vertex_list1.append(i[item])
 
