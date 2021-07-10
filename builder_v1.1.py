@@ -594,6 +594,8 @@ class AstroNet():
 				var_graph = AstroNet().Sphere().Graph(len(args_list))
 
 				for item in range(len(args_list)):
+					
+				    print(args_list[item].__dict__)
 
 				    var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
