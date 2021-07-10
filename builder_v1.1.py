@@ -267,16 +267,12 @@ class AstroNet():
 
 
 						def __init__(self, friends_network_link1=1, friends_network_link2=2):
-
-							#to access self.friends from the Friend class
 							
 							AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends)
 
 							self.friends_network_link1 = friends_network_link1;
 
 							self.friends_network_link2 = friends_network_link2;
-
-							#the attributes of Friend are accessed through the Account class
 
 							self.friends.append(self.profile['name'])
 
@@ -306,16 +302,12 @@ class AstroNet():
 				class Friends_network(AstroNet.Sphere.Friend):
 
 					def __init__(self, friends_network_link1=1, friends_network_link2=2):
-
-						#to access self.friends from the Friend class
 						
 						AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends)
 
 						self.friends_network_link1 = friends_network_link1;
 
 						self.friends_network_link2 = friends_network_link2;
-
-						#the attributes of Friend are accessed through the Account class
 
 						self.friends.append(name)
 
@@ -551,6 +543,10 @@ class AstroNet():
 				for item in range(len(args_list)):
 
 					var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
+					
+					print(args_list[0].next)
+
+					print(args_list[0].next.__dict__)
 
 					var_graph_list.append(args_list[0].next)
 
