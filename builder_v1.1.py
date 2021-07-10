@@ -853,13 +853,7 @@ class AstroNet():
 
 			def send_message_to_a_friend_from_the_same_network_f1(self, arg1, arg2):
 
-				counter = 0
-
 				if (arg2.profile['name'] in arg1.friends):
-
-					counter+=1
-
-					#arg2=counter
 
 					self.messages.append(self.message_text)
 
