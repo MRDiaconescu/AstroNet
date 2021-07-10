@@ -258,6 +258,10 @@ class AstroNet():
 
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends):
+				
+					#class which calls another class which calls another class
+
+					#using specific attributes from the initial class
 
 					class Friends_network(AstroNet.Sphere.Friend):
 
