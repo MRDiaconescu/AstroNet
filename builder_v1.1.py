@@ -552,8 +552,8 @@ class AstroNet():
 
 					var_graph_list.append(args_list[0].next)
 
-					var_graph.graph = var_graph_list
-
+					var_graph.build_graph(args_list[0].next)
+					
 				return (var_graph, var_graph_list)
 
 
