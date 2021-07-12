@@ -860,7 +860,6 @@ class AstroNet():
 					print(arg2.profile['name'] + " is not a member of your friends network.")
 					answer =input("Would you like to add " + arg2.profile['name'] + " to your friends network? Type yes or no ")
 
-					print("True")
 
 					if (answer == "yes"):
 
