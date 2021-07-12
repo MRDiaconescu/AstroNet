@@ -159,10 +159,6 @@ class AstroNet():
 
 						AstroNet.Sphere.Account.settings = self.settings = Settings.settings_var
 
-						print("var1:", AstroNet.Sphere.Account.settings)
-
-						print("var2:", self.settings)
-
 						return AstroNet.Sphere.Account.settings, self.settings
 
 
@@ -329,11 +325,7 @@ class AstroNet():
 
 							self.friends_network_message = friends_network_message
 
-							print(self.profile['name'])
-
 							self.friends.append(self.profile['name'])
-
-							print("Friends list: ", self.friends)
 
 							for item in self.friends:
 
@@ -371,11 +363,7 @@ class AstroNet():
 
 						self.friends_network_message = friends_network_message
 
-						print(self.profile['name'])
-
 						self.friends.append(name)
-
-						print("Friends list: ", self.friends)
 
 						for item in self.friends:
 
@@ -939,8 +927,6 @@ class AstroNet():
 
 			    		 		self.friends.append(self.profile['name'])
 
-			    		 		print(self.friends)
-
 			    		 		for item in self.friends:
 
 			    		 			print(item)
@@ -1025,8 +1011,6 @@ class AstroNet():
 
 					print(arg2.profile['name'] + " is not a member of your friends network.")
 					answer =input("Would you like to add " + arg2.profile['name'] + " to your friends network? Type yes or no ")
-
-					print("True")
 
 					if (answer == "yes"):
 
