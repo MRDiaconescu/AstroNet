@@ -132,10 +132,6 @@ class AstroNet():
 
 						AstroNet.Sphere.Account.settings = self.settings = Settings.settings_var
 
-						print("var1:", AstroNet.Sphere.Account.settings)
-
-						print("var2:", self.settings)
-
 						return AstroNet.Sphere.Account.settings, self.settings
 
 
