@@ -993,6 +993,7 @@ class AstroNet():
 							 	if ((item1.profile['date_of_birth'] == date_of_birth) and (item1.profile['country']==country)):
 
 							 		print(item1)
+									
 									return item1
 
 						 	else:
