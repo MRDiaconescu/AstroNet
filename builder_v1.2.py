@@ -78,14 +78,13 @@ class AstroNet():
 			self.link12 = link12;
 			self.link15 = link15;
 			self.link17 = link17;
-			self.link25 = link25;
+			self.link25 = link25;	
 
-			
-
+		
+		
 		class Account(object):
 
-
-
+			
 			def __init__(self, name,  date_of_birth, country, friends, account_link1=1, account_link2=2,
 							bridge1=1,bridge2=2, bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,
 							bridge8=8,bridge9=9, bridge10=10, bridge11=11, bridge12=12, bridge15=15,
@@ -1453,7 +1452,8 @@ class AstroNet():
 
 
 
-			
+		
+		
 AstroNet.Sphere.AdjVertex.add_friends_from_the_same_network = AstroNet.Sphere.Friend.add_friends_from_the_same_network
 
 AstroNet.Sphere.AdjVertex.builder_function = AstroNet.Sphere.Builder.builder_function
