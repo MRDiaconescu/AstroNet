@@ -2285,9 +2285,6 @@ class AstroNet():
 			
 
 
-
-						
-
 AstroNet.Sphere.AdjVertex.add_friends_from_the_same_network = AstroNet.Sphere.Friend.add_friends_from_the_same_network
 
 AstroNet.Sphere.AdjVertex.builder_function = AstroNet.Sphere.Builder.builder_function
@@ -2310,6 +2307,9 @@ AstroNet.Sphere.First.add_friends = AstroNet.Sphere.Friend.add_friends
 AstroNet.Sphere.First.add_yourself_to_the_list_of_friends = AstroNet.Sphere.Friend.add_yourself_to_the_list_of_friends
 
 AstroNet.Sphere.Message.send_message_to_a_friend_from_the_same_network = AstroNet.Sphere.First_message.send_message_to_a_friend_from_the_same_network_f1
+
+
+
 
 
 
