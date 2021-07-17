@@ -150,9 +150,6 @@ class AstroNet():
 						self.settings_message = settings_message
 
 
-
-
-
 					def edit_privacy_settings(self, arg):
 
 						Settings.settings_var['private_profile'] = arg
@@ -1554,4 +1551,7 @@ print(var_bridges_f1[1][0].bridge3)
 
    
 
+	
+
+	
 	
