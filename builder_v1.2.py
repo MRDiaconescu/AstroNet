@@ -1542,8 +1542,6 @@ print(var_map_f2[1][1].session_message)
 print(var_map_f2[1][2].settings_message)
 
 
-
-
 var_bridges_f1 = AstroNet().Sphere().send_message_using_bridges_f1(var_account, var_message)
 
 print(var_bridges_f1)
@@ -1555,3 +1553,5 @@ print(var_bridges_f1[1][0].bridge2)
 print(var_bridges_f1[1][0].bridge3)
 
    
+
+	
