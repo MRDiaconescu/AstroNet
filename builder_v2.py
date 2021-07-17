@@ -1477,8 +1477,6 @@ class AstroNet():
 
 						 print(item)
 
-						 print(type(item))
-
 						 for item1 in item:
 
 						 	if type(item1) != list:
