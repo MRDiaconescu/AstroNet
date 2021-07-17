@@ -580,7 +580,7 @@ class AstroNet():
 				self.account_message = account_message
 
 				self.primary_memory = ["LinkedList","Account", "Session", "Person", "Message", "Friend", "AdjVertex", "Graph",
-											"Builder", "First", "First_message", "NestCell"]
+						       "Builder", "First", "First_message", "NestCell"]
 				self.secondary_memory=["HiveCell", "TheHive", "Settings", "Friends_network", "Gate1", "NestingHive", "Gate2"]
 
 				super(AstroNet.Sphere.Account,self).__init__()
@@ -685,7 +685,7 @@ class AstroNet():
 				self.person_message = person_message
 
 				self.primary_memory = ["LinkedList","Account", "Session", "Person", "Message", "Friend", "AdjVertex", "Graph",
-											"Builder", "First", "First_message", "NestCell"]
+							"Builder", "First", "First_message", "NestCell"]
 				self.secondary_memory=["HiveCell", "TheHive", "Settings", "Friends_network", "Gate1", "NestingHive", "Gate2"]
 
 
@@ -931,7 +931,7 @@ class AstroNet():
 				self.adjVertex_message = adjVertex_message
 
 				self.primary_memory = ["LinkedList","Account", "Session", "Person", "Message", "Friend", "AdjVertex", "Graph",
-											"Builder", "First", "First_message", "NestCell"]
+						       "Builder", "First", "First_message", "NestCell"]
 				self.secondary_memory=["HiveCell", "TheHive", "Settings", "Friends_network", "Gate1", "NestingHive", "Gate2"]
 
 		    
@@ -2043,7 +2043,7 @@ class AstroNet():
 							bridge8=8,bridge9=9, bridge10=10, bridge11=11, bridge12=12, bridge15=15,
 							bridge17=17, bridge25=25, bridge27=27, account_message="Account message"),
 
-							 	session_link1=1, session_link2=2, session_message="Session message"),
+							 session_link1=1, session_link2=2, session_message="Session message"),
 
 							 AstroNet().Sphere().Account(name="name", date_of_birth="date of birth", country="country", friends="friends", 
 							account_link1=1, account_link2=2,bridge1=1,bridge2=2, bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,
@@ -2066,16 +2066,16 @@ class AstroNet():
 							AstroNet().Sphere().Friend(name="name", date_of_birth="date_of_birth", country="country", friends="friends", friend_link1=1, friend_link2=2, friend_message="Friend message").add_friends(name="name", date_of_birth="date_of_birth", country="country", friends="friends", friends_network_message="Friends network message"),
 
 							AstroNet().Sphere().AdjVertex( data=1, adjVertex_link1=1, adjVertex_link2=2,bridge1=1,bridge2=2, 
-						bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,bridge8=8,bridge9=9, bridge10=10, 
-						bridge11=11, bridge12=12, bridge15=15,bridge17=17, bridge25=25, bridge27=27, adjVertex_message="AdjVertex message"), 
+						        bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,bridge8=8,bridge9=9, bridge10=10, 
+						        bridge11=11, bridge12=12, bridge15=15,bridge17=17, bridge25=25, bridge27=27, adjVertex_message="AdjVertex message"), 
 
 							AstroNet().Sphere().Graph(vertices=1, graph_link1=1, graph_link2=2, bridge1=1,bridge2=2, 
-						bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,bridge8=8,bridge9=9, bridge10=10, 
-						bridge11=11, bridge12=12, bridge15=15,bridge17=17, bridge25=25, bridge27=27, graph_message="Graph message"),
+						        bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,bridge8=8,bridge9=9, bridge10=10, 
+						        bridge11=11, bridge12=12, bridge15=15,bridge17=17, bridge25=25, bridge27=27, graph_message="Graph message"),
 
 							AstroNet().Sphere().Builder(cell=7, shell=77, medium=777, link1=1, link2=2, link5=5, link7=7, builder_link1=1, builder_link2=2,
-						bridge1=1,bridge2=2, bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,bridge8=8,bridge9=9, bridge10=10, 
-						bridge11=11, bridge12=12, bridge15=15,bridge17=17, bridge25=25, bridge27=27, builder_message="Builder message"),
+						        bridge1=1,bridge2=2, bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,bridge8=8,bridge9=9, bridge10=10, 
+						        bridge11=11, bridge12=12, bridge15=15,bridge17=17, bridge25=25, bridge27=27, builder_message="Builder message"),
 							
 							AstroNet().Sphere().First(name="name", date_of_birth="date_of_birth", country="country", friends="friends", first_link1=1, first_link2=2, first_friend_message="First friend message"),
 
@@ -2310,9 +2310,6 @@ AstroNet.Sphere.First.add_friends = AstroNet.Sphere.Friend.add_friends
 AstroNet.Sphere.First.add_yourself_to_the_list_of_friends = AstroNet.Sphere.Friend.add_yourself_to_the_list_of_friends
 
 AstroNet.Sphere.Message.send_message_to_a_friend_from_the_same_network = AstroNet.Sphere.First_message.send_message_to_a_friend_from_the_same_network_f1
-
-
-
 
 
 
