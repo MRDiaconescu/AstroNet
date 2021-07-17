@@ -22,7 +22,7 @@ print("Welcome to astro net!")
 print("                                     *                                            ")
 print("                                    * *                                           ")
 print("                                   *   *                                          ")
-print("                                  *     *                                                                    ")
+print("                                  *     *                                         ")
 print("                                 *       *                                        ")
 print("                                *         *                                       ")
 print("                               *           *                                      ")
@@ -296,11 +296,11 @@ class AstroNet():
 
 						current_node = current_node.link_node
 
-						print("Item", current_node)
-
 						counter+=1
+						
+						print(current_node)
 
-						print("Value", current_node.value)
+						print(current_node.value)
 
 					var_set.add(current_node)
 
@@ -335,7 +335,7 @@ class AstroNet():
 
 					inst_3.set_link_node(next_node.get_link_node().get_link_node()) 
 
-					print(str(inst_3.info)+ " : " + str(inst_3.get_link_node().info))#str(next_node.get_link_node().get_link_node()))
+					print(str(inst_3.info)+ " : " + str(inst_3.get_link_node().info))
 
 					inst_f.link_node2 = inst_f.get_link_node()
 
@@ -472,20 +472,20 @@ class AstroNet():
 					node1.set_link_node4(node2);   node4.set_link_node4(node8);   node6.set_link_node4(node11);    node11.set_link_node4(node18);
 					node1.set_link_node5(node55);  node3.set_link_node5(node4);   node7.set_link_node5(node12);    node12.set_link_node5(node19);
 					node1.set_link_node6(node102); node3.set_link_node6(node4);   node7.set_link_node6(node13);    node13.set_link_node6(node20);
-					print("To 1st level");		   node3.set_link_node7(node59);  node8.set_link_node7(node13);    node13.set_link_node7(node21);
-					print("To 1st level");		   node3.set_link_node8(node106); node8.set_link_node8(node14);    node14.set_link_node8(node22);
-					print("To 1st level");		   print("To 2nd level");		  node6.set_link_node9(node5);     node9.set_link_node9(node10);
-					print("To 1st level");		   print("To 2nd level");		  node5.set_link_node10(node6);    node10.set_link_node10(node9);
-					print("To 1st level");		   print("To 2nd level");		  node8.set_link_node11(node7);    node10.set_link_node11(node11);
-					print("To 1st level");		   print("To 2nd level");		  node7.set_link_node12(node8);    node11.set_link_node12(node10);
-					print("To 1st level");		   print("To 2nd level");		  node5.set_link_node13(node7);    node12.set_link_node13(node13);
-					print("To 1st level");		   print("To 2nd level");		  node6.set_link_node14(node8);    node13.set_link_node14(node12);
-					print("To 1st level");		   print("To 2nd level");		  node5.set_link_node15(node63);   node13.set_link_node15(node14);
-					print("To 1st level");		   print("To 2nd level");		  node6.set_link_node16(node110);  node14.set_link_node16(node13);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");		   node9.set_link_node17(node12);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");		   node11.set_link_node18(node14);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");	   	   node9.set_link_node19(node67);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");	   	   node11.set_link_node20(node11);
+					print("To 1st level");	       node3.set_link_node7(node59);  node8.set_link_node7(node13);    node13.set_link_node7(node21);
+					print("To 1st level");	       node3.set_link_node8(node106); node8.set_link_node8(node14);    node14.set_link_node8(node22);
+					print("To 1st level");	       print("To 2nd level");	      node6.set_link_node9(node5);     node9.set_link_node9(node10);
+					print("To 1st level");	       print("To 2nd level");	      node5.set_link_node10(node6);    node10.set_link_node10(node9);
+					print("To 1st level");	       print("To 2nd level");	      node8.set_link_node11(node7);    node10.set_link_node11(node11);
+					print("To 1st level");	       print("To 2nd level");	      node7.set_link_node12(node8);    node11.set_link_node12(node10);
+					print("To 1st level");	       print("To 2nd level");	      node5.set_link_node13(node7);    node12.set_link_node13(node13);
+					print("To 1st level");	       print("To 2nd level");	      node6.set_link_node14(node8);    node13.set_link_node14(node12);
+					print("To 1st level");	       print("To 2nd level");	      node5.set_link_node15(node63);   node13.set_link_node15(node14);
+					print("To 1st level");	       print("To 2nd level");         node6.set_link_node16(node110);  node14.set_link_node16(node13);
+					print("To 1st level");	       print("To 2nd level");         print("To 3rd level");	       node9.set_link_node17(node12);
+					print("To 1st level");	       print("To 2nd level");	      print("To 3rd level");	       node11.set_link_node18(node14);
+					print("To 1st level");	       print("To 2nd level");	      print("To 3rd level");	       node9.set_link_node19(node67);
+					print("To 1st level");	       print("To 2nd level");	      print("To 3rd level");	       node11.set_link_node20(node11);
 
 
 					node15.set_link_node1(node23);   node23.set_link_node1(node33);  node33.set_link_node1(node41);   node41.set_link_node1(node47);
@@ -518,7 +518,7 @@ class AstroNet():
 					node18.set_link_node28(node118); node32.set_link_node28(node40); print("To 7th level");           print("To 8th level");
 					print("To 5th level");           node23.set_link_node29(node28); print("To 7th level");           print("To 8th level");
 					print("To 5th level");           node27.set_link_node30(node32); print("To 7th level");           print("To 8th level");
-					print("To 5th level");			 node23.set_link_node31(node75); print("To 7th level");           print("To 8th level");
+					print("To 5th level");	         node23.set_link_node31(node75); print("To 7th level");           print("To 8th level");
 					print("To 5th level");           node27.set_link_node32(node122);print("To 7th level");           print("To 8th level");
 
 					
@@ -585,10 +585,6 @@ class AstroNet():
 
 				super(AstroNet.Sphere.Account,self).__init__()
 
-				# self.value=value
-
-				# self.info = info
-
 
 
 			def build_profile(self, name, date_of_birth, country):
@@ -623,22 +619,11 @@ class AstroNet():
 
 
 
-						#use super for inheritance of the attributes of a class 
-
-						#super(Account, self).__init__()  
-
-
-
-
 					def edit_privacy_settings(self, arg):
 
 						Settings.settings_var['private_profile'] = arg
 
 						AstroNet.Sphere.Account.settings = self.settings = Settings.settings_var
-
-						print("var1:", AstroNet.Sphere.Account.settings)
-
-						print("var2:", self.settings)
 
 						return AstroNet.Sphere.Account.settings, self.settings
 
@@ -717,7 +702,7 @@ class AstroNet():
 
 				for item in range(len(self.centralized_database)):
 
-					print("Item",item)
+					print(item)
 
 					print(self.centralized_database[item])
 
@@ -737,17 +722,9 @@ class AstroNet():
 
 							self.centralized_database[item][item1] = arg1
 
+						print(counter)
 
-							#print("list")
-
-						print("Counter", counter)
-
-							
-
-
-
-				#self.centralized_database.append(arg1)
-
+						
 				return self.centralized_database
 
 
@@ -759,7 +736,7 @@ class AstroNet():
 
 				self.friends = arg1.friends
 
-				self.messages = [ [dict({})] for item in range(len(arg1.friends))]
+				self.messages = [[dict({})] for item in range(len(arg1.friends))]
 
 				self.message_text = {'Title':title, 'Message_content':message_content}
 
@@ -773,15 +750,7 @@ class AstroNet():
 
 				super(AstroNet.Sphere.Message,self).__init__(name=arg1.profile['name'], date_of_birth=arg1.profile['date_of_birth'], country=arg1.profile['country'], friends=arg1.friends)
 
-
-				# self.value = value
-
-				# self.info = info
-
-				print(self.friends)
-
-				print(self.messages)
-
+			
 			def send_message_to_a_friend_from_the_same_network(self, arg1, arg2):
 
 				counter = 0
@@ -811,8 +780,6 @@ class AstroNet():
 
 			def __init__(self, name, date_of_birth, country, friends, friend_link1=1, friend_link2=2, friend_message="Friend message"):
 
-				#the attributes from the __init__ method of account are inherited
-
 				super(AstroNet.Sphere.Friend,self).__init__(name, date_of_birth, country, friends) 
 
 				self.friend_link1 = friend_link1;
@@ -821,26 +788,16 @@ class AstroNet():
 
 				self.friend_message = friend_message
 
-				print("**********************************************************")
-
 				print(self.friends)
 
-				print("***********************************************************")
 
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends, friends_network_message="Friends network message"):
 
-					#check if the arguments match the data of the friends from the same network
-
 
 					class Friends_network(AstroNet.Sphere.Friend):
 
-
 						def __init__(self, friends_network_link1=1, friends_network_link2=2):
-
-							#print(self.friends)
-
-							#to access self.friends from the Friend class
 							
 							AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends)
 
@@ -850,13 +807,7 @@ class AstroNet():
 
 							self.friends_network_message = friends_network_message
 
-							#the attributes of Friend are accessed through the Account class
-
-							print(self.profile['name'])
-
 							self.friends.append(self.profile['name'])
-
-							print("Friends list: ", self.friends)
 
 							for item in self.friends:
 
@@ -885,10 +836,6 @@ class AstroNet():
 
 
 					def __init__(self, friends_network_link1=1, friends_network_link2=2, ):
-
-						#print(self.friends)
-
-						#to access self.friends from the Friend class
 						
 						AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends)
 
@@ -898,15 +845,7 @@ class AstroNet():
 
 						self.friends_network_message = friends_network_message
 
-						#the attributes of Friend are accessed through the Account class
-
-						print(self.profile['name'])
-
 						self.friends.append(name)
-
-						#self.friends.append(self.profile['name'])
-
-						print("Friends list: ", self.friends)
 
 						for item in self.friends:
 
@@ -1107,8 +1046,6 @@ class AstroNet():
 			
 			def build_the_friend_network_f1_A(self, arg1, arg2, arg3, arg5):
 
-				print("1st call")
-
 				arg1.friends = arg1.add_friends_from_the_same_network(arg2, arg3, arg5, arg1.friends).friends
 
 				return arg1.add_friends_from_the_same_network(arg1, arg2, arg5, arg1.friends).friends
@@ -1116,8 +1053,6 @@ class AstroNet():
 
 
 			def build_the_friend_network_f1_1_A(self, arg1, arg2, arg3, arg5):
-
-				print("1st call")
 
 				arg1.friends = arg1.add_friends_from_the_same_network(arg2, arg3, arg5, arg1.friends).friends
 
@@ -1127,8 +1062,6 @@ class AstroNet():
 
 			def build_the_friend_network_f1_B(self, arg1, arg2, arg3, arg5):
 
-				print("1st call")
-
 				arg1.friends = arg1.add_friends(arg2, arg3, arg5, arg1.friends).friends
 
 				return arg1.add_friends(arg1, arg2, arg5, arg1.friends).friends
@@ -1137,11 +1070,9 @@ class AstroNet():
 
 			def instance_f1(self,arg1, arg2, arg3, arg5, arg6, arg7):
 
-				#self.counter += 1
-
 				arg1 = arg2(arg3, arg5, arg6, arg7)
 
-				return  arg1#(self.counter,arg1)
+				return  arg1
 
 
 			def builder_function(self,arg1, arg2, arg3,arg5, arg6):
@@ -1209,14 +1140,14 @@ class AstroNet():
 
 						for item1 in item:
 
-							print("Value", item1)
+							print(item1)
 
 							var_vertex_list.append(item1)
 
 
 					if type(item) != list:
 
-						print("Value1:", item.__dict__)
+						print(item.__dict__)
 
 						var_vertex_list.append(item)
 
@@ -1242,25 +1173,23 @@ class AstroNet():
 
 						for item1 in item:
 
-							print("Value", item1)
+							print(item1)
 
 							var_vertex_list.append(item1)
 
 
 					if type(item) != list:
 
-						print("Value1:", item.__dict__)
+						print(item.__dict__)
 
 						var_vertex_list.append(item)
 
-
-				#var_vertex_list1.append(arg1[1])
 
 				for i in var_vertex_list:
 
 					if type(i) == AstroNet.Sphere.AdjVertex:
 
-						print("Vertex", i.__dict__)
+						print(i.__dict__)
 
 						var_vertex_list1.append(i)
 
@@ -1289,17 +1218,13 @@ class AstroNet():
 
 					var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
-					print("conn", args_list[0].next)
+					print(args_list[0].next)
 
-					print("conn1", args_list[0].next.__dict__)
+					print(args_list[0].next.__dict__)
 
 					var_graph_list.append(args_list[0].next)
 
-					#var_graph.build_graph(args_list[0].next)
-
-					var_graph.graph = var_graph_list
-
-				#var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[1])
+					var_graph.build_graph(args_list[0].next)
 
 				return (var_graph, var_graph_list)
 
@@ -1326,48 +1251,36 @@ class AstroNet():
 
 				for item in arg1.create_a_vertex_list_f1(arg2):
 
-					print("****Item****:", item)
-					print("****Item****:", item.__dict__)
+					print(item)
+					print(item.__dict__)
 
 
 					for item1 in  arg1.create_a_vertex_list_f1(arg5):
-
-						print("****item1****", item1)
-						print("****Item1****:", item1.__dict__)
+						print(item1)
+						print(item1.__dict__)
 
 
 						if item.__dict__['vertex']['name'] == item1.__dict__['vertex']['name']:
 
-							print()
-
-							print("^^^^^^^^^^^^^^^^^^^^Item^^^^^^^^^^^^^^^^^^^^", (item.__dict__))
+							print(item.__dict__)
 
 							args_list.append(item)
 
 				var_graph = AstroNet().Sphere().Graph(len(args_list))
 
-				#print("Graph")
-
-				print("Var graph", type(var_graph))
-
 				for item in range(len(args_list)):
 
-				    print("***********Arg*************:", args_list[item].__dict__)
+				    print(args_list[item].__dict__)
 
 				    var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
-				    print("conn", args_list[0].next)
+				    print(args_list[0].next)
 
-				    print("conn1", args_list[0].next.__dict__)
+				    print(args_list[0].next.__dict__)
 
 				    var_graph_list.append(args_list[0].next)
 
 				    var_graph.build_graph(args_list[0].next)
-
-				    #var_graph.graph = var_graph_list
-
-
-				#var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[1])
 
 				return var_graph
 
