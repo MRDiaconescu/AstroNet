@@ -2096,22 +2096,7 @@ class AstroNet():
 
 
 
-			items_set = set({})
 			items_set1 = set({})
-
-			for item in var_path:
-
-				for item1 in var_directed_path1:
-
-					for obj in item1.__dict__:
-
-						if obj == item:
-
-							print(obj)
-
-							items_set.add(obj)
-
-			print(items_set)
 
 			for item in var_list:
 
@@ -2298,8 +2283,7 @@ class AstroNet():
 
 
 
-			
-			
+						
 
 AstroNet.Sphere.AdjVertex.add_friends_from_the_same_network = AstroNet.Sphere.Friend.add_friends_from_the_same_network
 
