@@ -267,7 +267,7 @@ class AstroNet():
 					self.head_node = AstroNet().Sphere().HiveCell_f1(value, info)
 
 					self.primary_memory = ["LinkedList","Account", "Session", "Person", "Message", "Friend", "AdjVertex", "Graph",
-											"Builder", "First", "First_message", "NestCell"]
+								"Builder", "First", "First_message", "NestCell"]
 					self.secondary_memory=["HiveCell", "TheHive", "Settings", "Friends_network", "Gate1", "NestingHive", "Gate2"]
 
 					self.linked_list_message = "linked_list message"
