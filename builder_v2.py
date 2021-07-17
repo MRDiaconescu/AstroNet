@@ -1425,7 +1425,7 @@ class AstroNet():
 
 			    		 		for item in self.friends:
 
-			    		 			print("Item 7:", item)
+			    		 			print(item)
 
 					
 				    friends_network = Friends_network()
@@ -1576,7 +1576,7 @@ class AstroNet():
 					self.gate1_message = gate1_message
 
 					self.primary_memory = ["LinkedList","Account", "Session", "Person", "Message", "Friend", "AdjVertex", "Graph",
-												"Builder", "First", "First_message", "NestCell"]
+								"Builder", "First", "First_message", "NestCell"]
 					self.secondary_memory=["HiveCell", "TheHive", "Settings", "Friends_network", "Gate1", "NestingHive", "Gate2"]
 
 
@@ -1682,7 +1682,7 @@ class AstroNet():
 					self.gate2_message = gate2_message
 
 					self.primary_memory = ["LinkedList","Account", "Session", "Person", "Message", "Friend", "AdjVertex", "Graph",
-												"Builder", "First", "First_message", "NestCell"]
+								"Builder", "First", "First_message", "NestCell"]
 					self.secondary_memory=["HiveCell", "TheHive", "Settings", "Friends_network", "Gate1", "NestingHive", "Gate2"]
 
 
@@ -1782,9 +1782,9 @@ class AstroNet():
 			counter1 = 0
 
 			var_path = ['account_message', 'session_message','settings_message','person_message','message', 
-						'friend_message','friends_network_message','adjVertex_message', 'graph_message',
-						'builder_message','first_friend_message','first_message','nest_cell_message', 
-						'gate1_message','nesting_hive_message','gate2_message']
+				   'friend_message','friends_network_message','adjVertex_message', 'graph_message',
+			           'builder_message','first_friend_message','first_message','nest_cell_message', 
+				   'gate1_message','nesting_hive_message','gate2_message']
 
 			for item in var_path:
 
