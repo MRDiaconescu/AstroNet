@@ -2192,7 +2192,7 @@ class AstroNet():
 
 			
 
-
+			
 		def retrieve_data_from_the_hive(self, arg):
 
 			var = self.The_Hive_main_function().the_Hive_f1().HiveCell_f1_1(arg)
