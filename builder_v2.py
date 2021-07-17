@@ -964,8 +964,6 @@ class AstroNet():
 
 				self.graph_message = graph_message
 
-
-
 				self.primary_memory = ["LinkedList","Account", "Session", "Person", "Message", "Friend", "AdjVertex", "Graph",
 											"Builder", "First", "First_message", "NestCell"]
 				self.secondary_memory=["HiveCell", "TheHive", "Settings", "Friends_network", "Gate1", "NestingHive", "Gate2"]
@@ -1122,13 +1120,13 @@ class AstroNet():
 				return (self.counter, AstroNet().Sphere().AdjVertex(vertex_var))
 
 
+			
 
 			def vertex_f1(self, var1, var2, var5, var7, var11, var15, var17):
 
 				return var1.instance_f1(var2, var5, var7, var11, var15, var17)
 
 
-			
 
 			def create_a_vertex_list_f1(self, arg1):
 
