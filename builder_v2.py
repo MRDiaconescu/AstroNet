@@ -1187,10 +1187,6 @@ class AstroNet():
 
 					var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
-					print(args_list[0].next)
-
-					print(args_list[0].next.__dict__)
-
 					var_graph_list.append(args_list[0].next)
 
 					var_graph.build_graph(args_list[0].next)
@@ -1230,8 +1226,6 @@ class AstroNet():
 
 
 						if item.__dict__['vertex']['name'] == item1.__dict__['vertex']['name']:
-
-							print(item.__dict__)
 
 							args_list.append(item)
 
