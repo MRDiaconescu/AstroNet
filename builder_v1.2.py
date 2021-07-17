@@ -1003,8 +1003,6 @@ class AstroNet():
 
 				if (arg2.profile['name'] in arg1.friends):
 
-					counter+=1
-
 					self.messages.append(self.message_text)
 
 				else:
