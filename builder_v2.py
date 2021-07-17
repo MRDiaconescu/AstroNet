@@ -1822,8 +1822,6 @@ class AstroNet():
 
 			for item in range(counter2):
 
-				print(item)
-
 				var_path1.append(var_path[item])
 
 
