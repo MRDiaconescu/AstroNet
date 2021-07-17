@@ -1128,36 +1128,7 @@ class AstroNet():
 				return var1.instance_f1(var2, var5, var7, var11, var15, var17)
 
 
-			def create_a_vertex_list(self, arg1):
-
-				var_vertex_list = []
-
-				var_vertex_list.append(arg1[1])
-
-				for item in arg1[1].__dict__['friends']:
-
-					if type(item) ==  list:
-
-						for item1 in item:
-
-							print(item1)
-
-							var_vertex_list.append(item1)
-
-
-					if type(item) != list:
-
-						print(item.__dict__)
-
-						var_vertex_list.append(item)
-
-
-
-				return var_vertex_list
-
-
-
-
+			
 
 			def create_a_vertex_list_f1(self, arg1):
 
@@ -1325,15 +1296,11 @@ class AstroNet():
 
 							for friend in item.__dict__['vertex']['friends']:
 
-								print("Friends list1: ", friend)
-
 								var_initial_level.append(("Second level", friend))
 
 						elif 'friends' in item.__dict__:
 
 							for friend in item.__dict__['friends']:
-
-								print("Friends list1_1: ", friend)
 
 								var_initial_level.append(("Second level", friend))
 
@@ -1348,19 +1315,10 @@ class AstroNet():
 
 								var_initial_level.append(("Third level:", item1))
 
-								# for friend1 in item1.__dict__['friends']:
-
-								# 	print("Friends list2: ", friend1)
-
-
 								if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 								and 'friends' not in item1.__dict__):
-
-									print("******")
 											
 									for friend1 in item1.__dict__['vertex']['friends']:
-
-										print("Friends list2: ", friend1)
 
 										var_friends_of_friends.append(friend1)
 
@@ -1369,17 +1327,11 @@ class AstroNet():
 								if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 								and 'friends' in item1.__dict__):
 
-									print("*************")
-
 									print("Len:", len(item1.__dict__['friends']))
 
 									for friend1 in item1.__dict__['friends']:
 
 										if type(friend1) != list:
-
-											print("*******************")
-
-											print("Friends list2:", friend1.__dict__)
 
 											var_friends_of_friends.append(friend1)
 
@@ -1393,8 +1345,6 @@ class AstroNet():
 
 											
 						
-				print("var_initial_level", var_initial_level)
-
 				return  (var_initial_level, var_friends_of_friends)
 
 
@@ -1447,8 +1397,6 @@ class AstroNet():
 
 			def __init__(self, name, date_of_birth, country, friends, first_link1=1, first_link2=2, first_friend_message="First friend message"):
 
-				#the attributes from the __init__ method of account are inherited
-
 				super(AstroNet.Sphere.First,self).__init__(name, date_of_birth, country, friends) 
 
 				self.first_link1 = first_link1;
@@ -1457,18 +1405,10 @@ class AstroNet():
 
 				self.first_friend_message = first_friend_message
 
-				print("**********************************************************")
-
 				print(self.friends)
-
-				print("***********************************************************")
 
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends, arg1, arg2,  friends_network_message="Friends_network message"):
-
-				    print("----------------------------------------------------")
-
-					#check if the arguments match the data of the friends from the same network
 
 				    class Friends_network(AstroNet.Sphere.Friend):
 
@@ -1482,8 +1422,6 @@ class AstroNet():
 
 			    		 	self.friends_network_message = friends_network_message
 
-			    		    #the attributes of Friend are accessed through the Account class
-
 
 			    		 	self.f1 = AstroNet.Sphere.Builder.f1
 
@@ -1491,8 +1429,7 @@ class AstroNet():
 			    		 	if self.f1(self, arg1, arg2, self.profile['name']):
 
 			    		 		self.friends.append(self.profile['name'])
-
-			    		 		print("Friends list 7: ", self.friends)
+							
 
 			    		 		for item in self.friends:
 
@@ -1524,9 +1461,6 @@ class AstroNet():
 
 				self.first_message = first_message
 
-				print(self.friends)
-
-				print(self.messages)
 
 			def add_friend_f1(self):
 
@@ -1559,53 +1493,19 @@ class AstroNet():
 
 							 	if ((item1.profile['date_of_birth'] == date_of_birth) and (item1.profile['country']==country)):
 
-							 		print("Found: ", item1)
+							 		print(item1)
 
-							 		print(1)
-							 		return item1
+									return item1
 
 						 	else:
 
 						 		pass
 
-			def send_message_to_a_friend_from_the_same_network(self, arg1, arg2):
-
-				counter = 0
-
-				if (arg2 in arg1.friends):
-
-					counter+=1
-
-					#arg2=counter
-
-					self.messages.append(self.message_text)
-
-				else:
-
-					print(arg2 + " is not a member of your friends network.")
-					answer =input("Would you like to add " + arg2 + " to your friends network? Type yes or no ")
-
-					print("True")
-
-					if (answer == "yes"):
-
-						arg1.add_friends(arg2, "1992, 7, 7", "NL", "Q")
-
-						print(arg2 + " is now your friend ")
-
-
-				return self.messages
-
+			
 
 			def send_message_to_a_friend_from_the_same_network_f1(self, arg1, arg2):
 
-				counter = 0
-
 				if (arg2.profile['name'] in arg1.friends):
-
-					counter+=1
-
-					#arg2=counter
 
 					self.messages.append(self.message_text)
 
@@ -1613,8 +1513,6 @@ class AstroNet():
 
 					print(arg2.profile['name'] + " is not a member of your friends network.")
 					answer =input("Would you like to add " + arg2.profile['name'] + " to your friends network? Type yes or no ")
-
-					print("True")
 
 					if (answer == "yes"):
 
@@ -1625,12 +1523,6 @@ class AstroNet():
 						arg1.friends.append(friends_list)
 
 						self.messages.append(self.message_text)
-
-
-				print("Messages: ", self.messages)
-
-				print("Friends: ", friends_list)
-
 
 
 				return (self.messages, arg1)
@@ -1765,7 +1657,6 @@ class AstroNet():
 
 							return AstroNet().Sphere().NestCell(self, cell, shell, medium).Gate1().build_the_nest_cell(self, cell, shell, medium)
 
-					#return self.network
 
 					the_hive = NestingHive()
 
@@ -1915,8 +1806,6 @@ class AstroNet():
 
 					var_message = item
 
-					print("Counter", counter)
-
 
 			for item1 in var_path:
 
@@ -1927,8 +1816,6 @@ class AstroNet():
 					print(item1)
 
 					var_message1 = item1
-
-					print("Counter1", counter1)
 
 					counter2=counter1
 
@@ -1942,16 +1829,12 @@ class AstroNet():
 
 			var_path1 = []
 
-			print(counter2)
-
 
 			for item in range(counter2):
 
 				print(item)
 
 				var_path1.append(var_path[item])
-
-			print(var_path1)
 
 
 			return((arg1, arg2), var_path1)
@@ -2046,8 +1929,6 @@ class AstroNet():
 
 			for item in range(len(var_directed_path[1])):
 
-				#print(var_directed_path1[item].__dict__[var_directed_path[1][item]])
-
 				var_directed_path1[item].__dict__[var_directed_path[1][item]] = var_directed_path[1][0]
 
 				print(var_directed_path1[item].__dict__[var_directed_path[1][item]])
@@ -2095,19 +1976,8 @@ class AstroNet():
 
 			for item in range(len(var_directed_path[1])):
 
-				# for item1 in arg1.primary_memory:
-
-					# if (var_directed_path[1][item].split("_").join(" ").find(item1)):
-
-					# 	print("item", var_directed_path[1][item].find(item1))
-
-					#print(var_directed_path[1][item].split("_"))
-
 					item_list.append(var_directed_path[1][item].split("_"))
 
-			for item1 in range(len(item_list)):
-
-				print("list", item_list[item1])
 
 			for item in range(len(item_list)):
 
@@ -2125,8 +1995,8 @@ class AstroNet():
 
 					if item.upper() in item1.upper():
 
-						print("Item", item)
-						print("Item1", item1)
+						print(item)
+						print(item1)
 
 						set_var_primary.add(item1)
 
@@ -2136,10 +2006,6 @@ class AstroNet():
 
 						set_var_secondary.add(item1)
 
-
-
-			print(set_var_primary)
-			print(set_var_secondary)
 
 			return (set_var_primary, set_var_secondary)
 
@@ -2240,11 +2106,6 @@ class AstroNet():
 							AstroNet().Sphere().NestCell(cell="cell", shell="shell", medium="medium", link1=1, link2=2, link5=5, link7=7, nestCell_link1=1, nestCell_link2=2, nest_cell_message="NestCell message").Gate2(gate2_link1=1, gate2_link2=2, bridge1=1,bridge2=2, bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,
 							bridge8=8,bridge9=9, bridge10=10, bridge11=11, bridge12=12, bridge15=15, bridge17=17, bridge25=25, bridge27=27, gate2_message="Gate2 message")]
 
-			print(var_directed_path1[1].linked_list_message)
-
-			print(var_directed_path[1])
-
-			print(var_list)
 
 
 			items_set = set({})
@@ -2258,7 +2119,7 @@ class AstroNet():
 
 						if obj == item:
 
-							print("obj", obj)
+							print(obj)
 
 							items_set.add(obj)
 
@@ -2272,13 +2133,13 @@ class AstroNet():
 
 						if item.upper() + "_" + "message".upper() == obj.upper():
 
-							print("obj", obj)
+							print(obj)
 
 							items_set1.add(obj)
 
 						if item.upper() == obj.upper():
 
-							print("obj", obj)
+							print(obj)
 
 							items_set1.add(obj)
 
@@ -2288,25 +2149,13 @@ class AstroNet():
 
 				list_items_set1.append(item)
 
-			print("list_items_set1", list_items_set1)
-
-
 			for item1 in  list_items_set1:
 
 				if (("_" not in item1) and (item1 != "message") and  (item1 != "first_message")):
 
 					list_items_set1.remove(item1)
-			print("list_items_set1", list_items_set1)
-
+					
 			items_set1 = list_items_set1
-
-			print("items_set", items_set)
-			print()
-
-			print("items_set1", items_set1)
-			print()
-
-			print(var_list)
 
 			linked_list = AstroNet().Sphere().LinkedList(arg1.value, arg1.info)
 
@@ -2314,6 +2163,7 @@ class AstroNet():
 			set1 = set({})
 
 			for name in var_list:
+				
 				for item in items_set1:
 
 					for item1 in  range(len(var_directed_path1)):
@@ -2324,58 +2174,21 @@ class AstroNet():
 
 								if obj == item:
 
-									print("Found", obj)
+									print(obj)
 
 									set1.add(var_directed_path1[item1])
 
-			print(set1)
-
-
-			print(len(set1))
 
 			linked_list = AstroNet().Sphere().LinkedList(arg1.value, arg1.info)
 
-			# for item1 in list(set1):
-
 			for item in var_list:
 
-				item = AstroNet().Sphere().HiveCell_f1(info=item)#, instance=item1)
-
-				print("instance", item.instance)
+				item = AstroNet().Sphere().HiveCell_f1(info=item)
 
 				linked_list.push(item)
 
 
-			print(linked_list.head_node.info)
-
-			print(linked_list.head_node.link_node.info)
-
-
 			current_node = linked_list.head_node
-
-			print("Current_node:",current_node)
-
-			print("Current_node.value", current_node.value)
-
-			print("Current_node.info", current_node.info)
-
-
-			print("Vertex", current_node.info)
-
-			print("Vertex", current_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.link_node.link_node.link_node.info)
-
-
-
 
 
 			for item1 in list(set1):
@@ -2386,109 +2199,18 @@ class AstroNet():
 
 					current_node.instance = item1
 
-					print("Instance",current_node.instance)
-
+					print(current_node.instance)
 
 					break
-
-			print("Instance", current_node.instance)
-
-			# for item in list(set1):
-
-			# 	print("Set item", item)
 
 
 			if len(star_model[1]) <= len(arg1.secondary_memory):
 
 				linked_list.add_conn_between_nodes_star_model()
-
-			current_node = linked_list.head_node
-
-			print("Vertex1", current_node.info)
-
-			print("Vertex1", current_node.link_node.info)
-
-			print("Vertex1", current_node.link_node.link_node.info)
-
-			print("Vertex1", current_node.link_node.link_node.link_node.info)
-
-			print("Vertex1", current_node.link_node.link_node.link_node.link_node.info)
-
-			#print("Vertex1", current_node.link_node.link_node.link_node.link_node.link_node.info)
-
-			#print("Vertex1", current_node.link_node.link_node.link_node.link_node.link_node.link_node.info)
-
-
-
-
-
-			print(len(var_list))
-
-			return linked_list
-
-
+				
 
 			
-			# for item in items_set1:
-
-			# 	for item1 in set1[0]:
-
-			# 		for obj in item1.__dict__:
-
-			# 			if ((obj!= item) and ("_" in obj and "message" in obj) and (obj not in items_set1) and obj!="message"):
-
-			# 				print("Item1", obj)
-
-			# 				set1[1].add(item1)
-
-
-			# print(set1[1])	
-
-			# for item in var_list:	
-
-			# 	for item1 in set1[1]:
-
-			# 		#print(type(item))
-			# 		# print(item1.__class__)
-			# 		# print()
-
-			# 		if item in str(item1.__class__):
-			# 			print("Item",item1.__class__)
-
-			# print()
-
-			# for item in var_list:	
-
-			# 	for item1 in set1[0]:
-
-			# 		#print(type(item))
-			# 		# print(item1.__class__)
-			# 		# print()
-
-			# 		if item in str(item1.__class__):
-			# 			print("Item",item1.__class__)
-
-
-
-
-			# linked_list = AstroNet().Sphere().LinkedList(arg1.value, arg1.info)
-
-			# for item in var_list:
-
-			# 	item = AstroNet().Sphere().HiveCell_f1(info=item)
-
-			# 	linked_list.push(item)
-
-			# print(linked_list.head_node.info)
-
-			# print(linked_list.head_node.link_node.info)
-
-
-			# if len(star_model[1]) <= len(arg1.secondary_memory):
-
-			# 	linked_list.add_conn_between_nodes_star_model()
-
-			# print(len(var_list))
+			return linked_list
 
 
 
@@ -2496,12 +2218,6 @@ class AstroNet():
 
 
 		def retrieve_data_from_the_hive(self, arg):
-
-			print(self.The_Hive_main_function())
-
-			# print(self.The_Hive_main_function().the_Hive_f1().head_node.value)
-
-			# print(self.The_Hive_main_function().the_Hive_f1().head_node.link_node.value)
 
 			var = self.The_Hive_main_function().the_Hive_f1().HiveCell_f1_1(arg)
 
@@ -2517,6 +2233,7 @@ class AstroNet():
 			self.communications_list = arg
 
 			return self.communications_list
+		
 
 		def send_message_using_the_map_f2(self, arg1, arg2, arg3):
 
@@ -2528,15 +2245,11 @@ class AstroNet():
 
 				var_items.append(item)
 
-			print(var_items)
-
 			for i in range(len(var_items)):
 
 				for item in range(len(arg3)):
 
 					if type(var_items[i]) == type(arg3[item]):
-
-						#print(var_items[i])
 
 						print(var[0][i])
 
@@ -2547,7 +2260,6 @@ class AstroNet():
 
 		def send_message_using_bridges_f2(self, arg1, arg2, arg3):
 
-
 			var = self.send_message_using_bridges_f1(arg1, arg2)
 
 			var_items =[]
@@ -2556,15 +2268,11 @@ class AstroNet():
 
 				var_items.append(item)
 
-			print(var_items)
-
 			for i in range(len(var_items)):
 
 				for item in range(len(arg3)):
 
 					if type(var_items[i]) == type(arg3[item]):
-
-						#print(var_items[i])
 
 						print(var[0][i])
 
@@ -2577,47 +2285,23 @@ class AstroNet():
 
 			var = self.send_message_using_the_star_model_f1(arg1, arg2)
 
-			print(var)
-
 			current_node = var.head_node
 
-			# print(var.head_node.info)
-
-			# print(current_node.link_node.info)
-
-			# print(current_node.link_node.link_node.info)
-
-			# print(current_node.link_node.link_node.link_node.info)
-
-			# print(current_node.link_node.link_node.link_node.link_node.info)
-
-			# print(current_node.info)
-
-
-		
-			
 			while current_node:
 
 				current_node = current_node.link_node
 
-				#print(current_node)
-
 				for item in arg3:
-
-					print(item)
 
 					if current_node:
 
-						print("item", current_node.instance)
-
-						print(current_node)
-
 						if ((type(current_node.instance) == type(item))):
 
-							print("Found", current_node.instance)
+							print(current_node.instance)
 
 							current_node.instance = item
 
+							
 			return var
 
 						
@@ -2626,7 +2310,8 @@ class AstroNet():
 
 
 
-
+			
+			
 
 AstroNet.Sphere.AdjVertex.add_friends_from_the_same_network = AstroNet.Sphere.Friend.add_friends_from_the_same_network
 
