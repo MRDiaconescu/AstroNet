@@ -1467,6 +1467,7 @@ class AstroNet():
 				country = input("Enter the country name ")
 
 				return country
+			
 
 			def centralized_database_f1_1(self, arg1):
 
@@ -1484,13 +1485,12 @@ class AstroNet():
 							 	if ((item1.profile['date_of_birth'] == date_of_birth) and (item1.profile['country']==country)):
 
 							 		print(item1)
-									
-									return item1
+
+							 		return item1
 
 						 	else:
 
 						 		pass
-
 			
 
 			def send_message_to_a_friend_from_the_same_network_f1(self, arg1, arg2):
