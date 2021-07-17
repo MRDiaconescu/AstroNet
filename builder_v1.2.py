@@ -1509,3 +1509,42 @@ var_gate2 = AstroNet().Sphere().NestCell(var_cell, var_shell, var_medium).Gate2(
 var_person = AstroNet().Sphere().Person()
 
 
+var_map = AstroNet().Sphere().create_map(var_account, var_session, var_settings, var_message, var_first_message, var_friend, var_friends_network, var_adjVertex, var_graph, var_builder5, var_person, var_first, var_nest_cell_35, var_gate1, var_nestingHive2, var_gate2)
+
+print(var_map)
+
+print(var_account.account_link1)
+print(var_session.session_link2)
+
+print(var_account.account_link1.session_link1)
+
+
+var_bridges = AstroNet().Sphere().build_bridges(var_account, var_settings, var_message, var_first_message, var_friend, var_friends_network, var_adjVertex, var_graph, var_builder5, var_person, var_first, var_nest_cell_35, var_gate1, var_nestingHive2, var_gate2, var_session)
+
+print(var_bridges)
+
+print(var_bridges.bridge1)
+print(var_bridges.bridge2)
+print(var_bridges.bridge5)
+
+
+var_map_f2 = AstroNet().Sphere().send_message_using_the_map_f1(var_account,var_message)
+
+print(var_map_f2[0])
+
+print(var_map_f2[1])
+
+print(var_map_f2[1][0].account_message)
+print(var_map_f2[1][1].session_message)
+print(var_map_f2[1][2].settings_message)
+
+
+var_bridges_f1 = AstroNet().Sphere().send_message_using_bridges_f1(var_account, var_message)
+
+print(var_bridges_f1)
+
+print(var_bridges_f1[1][0].bridge1)
+
+print(var_bridges_f1[1][0].bridge2)
+
+print(var_bridges_f1[1][0].bridge3)
