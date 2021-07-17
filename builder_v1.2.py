@@ -1277,9 +1277,9 @@ class AstroNet():
 			counter1 = 0
 
 			var_path = ['account_message', 'session_message','settings_message','person_message','message', 
-						'friend_message','friends_network_message','adjVertex_message', 'graph_message',
-						'builder_message','first_friend_message','first_message','nest_cell_message', 
-						'gate1_message','nesting_hive_message','gate2_message']
+				    'friend_message','friends_network_message','adjVertex_message', 'graph_message',
+				    'builder_message','first_friend_message','first_message','nest_cell_message', 
+				    'gate1_message','nesting_hive_message','gate2_message']
 
 			for item in var_path:
 
