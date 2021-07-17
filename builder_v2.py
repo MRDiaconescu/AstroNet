@@ -1484,7 +1484,7 @@ class AstroNet():
 							 	if ((item1.profile['date_of_birth'] == date_of_birth) and (item1.profile['country']==country)):
 
 							 		print(item1)
-
+									
 									return item1
 
 						 	else:
@@ -2302,11 +2302,15 @@ AstroNet.Sphere.AdjVertex.builder_function_5 = AstroNet.Sphere.Builder.builder_f
 
 
 
+
 AstroNet.Sphere.First.add_friends = AstroNet.Sphere.Friend.add_friends
 
 AstroNet.Sphere.First.add_yourself_to_the_list_of_friends = AstroNet.Sphere.Friend.add_yourself_to_the_list_of_friends
 
 AstroNet.Sphere.Message.send_message_to_a_friend_from_the_same_network = AstroNet.Sphere.First_message.send_message_to_a_friend_from_the_same_network_f1
+
+
+
 
 
 
