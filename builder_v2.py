@@ -185,9 +185,6 @@ class AstroNet():
 					return self.link_node
 
 	
-
-
-
 			var_hive_cell = HiveCell(value, info)
 
 			return var_hive_cell
