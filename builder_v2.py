@@ -261,8 +261,6 @@ class AstroNet():
 
 					next_node.link_node2 = inst_3
 
-					next_node.set_link_node(next_node.get_link_node())  
-
 					inst_3.link_node2 = inst_3.get_link_node()
 
 					inst_f = inst_3.link_node2
