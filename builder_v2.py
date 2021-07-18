@@ -114,137 +114,71 @@ class AstroNet():
 
 					self.instance = instance
 
-				def set_link_node(self, link_node):
+				def set_link_node(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node1(self, link_node): self.link_node = link_node;
 
-				def set_link_node1(self, link_node):
+				def set_link_node2(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node3(self, link_node): self.link_node = link_node;
 
-				def set_link_node2(self, link_node):
+				def set_link_node4(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node5(self, link_node): self.link_node = link_node;
 
-				def set_link_node3(self, link_node):
+				def set_link_node6(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node7(self, link_node): self.link_node = link_node;
 
-				def set_link_node4(self, link_node):
+				def set_link_node8(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node9(self, link_node): self.link_node = link_node;
 
-				def set_link_node5(self, link_node):
+				def set_link_node10(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node11(self, link_node): self.link_node = link_node;
 
-				def set_link_node6(self, link_node):
+				def set_link_node12(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node13(self, link_node): self.link_node = link_node;
 
-				def set_link_node7(self, link_node):
+				def set_link_node14(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node15(self, link_node): self.link_node = link_node;
 
-				def set_link_node8(self, link_node):
+				def set_link_node16(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node17(self, link_node): self.link_node = link_node;
 
-				def set_link_node9(self, link_node):
+				def set_link_node18(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node19(self, link_node): self.link_node = link_node;
 
-				def set_link_node10(self, link_node):
+				def set_link_node20(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node21(self, link_node): self.link_node = link_node;
 
-				def set_link_node11(self, link_node):
+				def set_link_node22(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node23(self, link_node): self.link_node = link_node;
 
-				def set_link_node12(self, link_node):
+				def set_link_node24(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node25(self, link_node): self.link_node = link_node;
 
-				def set_link_node13(self, link_node):
+				def set_link_node26(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node27(self, link_node): self.link_node = link_node;
 
-				def set_link_node14(self, link_node):
+				def set_link_node28(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node29(self, link_node): self.link_node = link_node;
 
-				def set_link_node15(self, link_node):
+				def set_link_node30(self, link_node): self.link_node = link_node;
 
-					self.link_node = link_node
+				def set_link_node31(self, link_node): self.link_node = link_node;
 
-				def set_link_node16(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node17(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node18(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node19(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node20(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node21(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node22(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node23(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node24(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node25(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node26(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node27(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node28(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node29(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node30(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node31(self, link_node):
-
-					self.link_node = link_node
-
-				def set_link_node32(self, link_node):
-
-					self.link_node = link_node
+				def set_link_node32(self, link_node):self.link_node = link_node;
 
 				def get_link_node(self):
 
