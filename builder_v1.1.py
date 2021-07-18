@@ -19,7 +19,7 @@ from datetime import date as date_module
 
 
 
-print("Welcome to astro net!")
+print("Welcome to AstroNet!")
 print("                                     *                                            ")
 print("                                    * *                                           ")
 print("                                   *   *                                          ")
