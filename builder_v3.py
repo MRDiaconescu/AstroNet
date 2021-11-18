@@ -2672,7 +2672,6 @@ class AstroNet():
 
 			
 
-
 		class Polyhedron():
 
 			def __init__(self):
@@ -2685,21 +2684,23 @@ class AstroNet():
 			def __str__(self):
 
 				return str(self.polyhedron)
+			
 
 			def build_first_level_connections_list(self, p1):
 
 				self.first_level_connections_list.append(p1)
 
 				return self.first_level_connections_list
+			
 
 			def first_level_connections_list(self):
 
 				first_level_connections = []
-				#first_level_connections_coordinates = []
 
 				for item in self.first_level_connections_list: 
 
 					line_edges = item.line_edges()
+					
 					first_level_connections.append(line_edges)
 				
 				return first_level_connections
@@ -2712,7 +2713,9 @@ class AstroNet():
 				for item in self.first_level_connections_list: 
 
 					line_edges = item.line_edges()
+					
 					first_level_connections.append(line_edges)
+					
 				print(first_level_connections)
 
 				
@@ -2722,7 +2725,7 @@ class AstroNet():
 
 				return self.second_level_connections_list
 
-
+			
 			def second_level_connections_list(self):
 
 				second_level_connections = []
@@ -2730,6 +2733,7 @@ class AstroNet():
 				for item in self.second_level_connections_list: 
 
 					line_edges = item.line_edges()
+					
 					second_level_connections.append(line_edges)
 				
 				return second_level_connections
@@ -2742,7 +2746,9 @@ class AstroNet():
 				for item in self.second_level_connections_list: 
 
 					line_edges = item.line_edges()
+					
 					second_level_connections.append(line_edges)
+					
 				print(second_level_connections)
 
 
@@ -2759,6 +2765,7 @@ class AstroNet():
 				for item in self.third_level_connections_list: 
 
 					line_edges = item.line_edges()
+					
 					third_level_connections.append(line_edges)
 				
 				return third_level_connections
@@ -2771,16 +2778,15 @@ class AstroNet():
 				for item in self.third_level_connections_list: 
 
 					line_edges = item.line_edges()
+					
 					third_level_connections.append(line_edges)
+					
 				print(third_level_connections)
 
 
 
 
 			
-
-
-
 
 
 AstroNet.Sphere.AdjVertex.add_friends_from_the_same_network = AstroNet.Sphere.Friend.add_friends_from_the_same_network
@@ -2805,6 +2811,9 @@ AstroNet.Sphere.First.add_friends = AstroNet.Sphere.Friend.add_friends
 AstroNet.Sphere.First.add_yourself_to_the_list_of_friends = AstroNet.Sphere.Friend.add_yourself_to_the_list_of_friends
 
 AstroNet.Sphere.Message.send_message_to_a_friend_from_the_same_network = AstroNet.Sphere.First_message.send_message_to_a_friend_from_the_same_network_f1
+
+
+
 
 
 
@@ -2875,6 +2884,7 @@ line22 = AstroNet().Sphere().Line(varV, varW); line66 = AstroNet().Sphere().Line
 line23 = AstroNet().Sphere().Line(varW, varX); line67 = AstroNet().Sphere().Line(varWPrime, varXPrime)
 line24 = AstroNet().Sphere().Line(varX, varQ); line68 = AstroNet().Sphere().Line(varXPrime, varQPrime)
 
+
 #3 dimensional
 
 line25 = AstroNet().Sphere().Line(varA, varI); line70 = AstroNet().Sphere().Line(varAPrime, varIPrime)
@@ -2904,11 +2914,12 @@ line43 = AstroNet().Sphere().Line(varU, varY); line88 = AstroNet().Sphere().Line
 line44 = AstroNet().Sphere().Line(varV, varY); line89 = AstroNet().Sphere().Line(varVPrime, varYPrime)
 
 
-
 # print(line1)
 # line1.print_line_edges()
 
+
 polyhedron1 = AstroNet().Sphere().Polyhedron()
+
 
 # second dimension
 
@@ -2949,7 +2960,6 @@ polyhedron1.build_second_level_connections_list(line15); polyhedron1.build_secon
 polyhedron1.build_second_level_connections_list(line16); polyhedron1.build_second_level_connections_list(line60)
 
 
-
 # third dimension
 
 polyhedron1.build_second_level_connections_list(line33); polyhedron1.build_second_level_connections_list(line78)
@@ -2965,7 +2975,6 @@ polyhedron1.print_second_level_connections_list()
 
 
 #second dimension 
-
 
 polyhedron1.build_third_level_connections_list(line17); polyhedron1.build_third_level_connections_list(line61)
 polyhedron1.build_third_level_connections_list(line18); polyhedron1.build_third_level_connections_list(line62)
