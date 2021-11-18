@@ -472,20 +472,20 @@ class AstroNet():
 					node1.set_link_node4(node2);   node4.set_link_node4(node8);   node6.set_link_node4(node11);    node11.set_link_node4(node18);
 					node1.set_link_node5(node55);  node3.set_link_node5(node4);   node7.set_link_node5(node12);    node12.set_link_node5(node19);
 					node1.set_link_node6(node102); node3.set_link_node6(node4);   node7.set_link_node6(node13);    node13.set_link_node6(node20);
-					print("To 1st level");		   node3.set_link_node7(node59);  node8.set_link_node7(node13);    node13.set_link_node7(node21);
-					print("To 1st level");		   node3.set_link_node8(node106); node8.set_link_node8(node14);    node14.set_link_node8(node22);
-					print("To 1st level");		   print("To 2nd level");		  node6.set_link_node9(node5);     node9.set_link_node9(node10);
-					print("To 1st level");		   print("To 2nd level");		  node5.set_link_node10(node6);    node10.set_link_node10(node9);
-					print("To 1st level");		   print("To 2nd level");		  node8.set_link_node11(node7);    node10.set_link_node11(node11);
-					print("To 1st level");		   print("To 2nd level");		  node7.set_link_node12(node8);    node11.set_link_node12(node10);
-					print("To 1st level");		   print("To 2nd level");		  node5.set_link_node13(node7);    node12.set_link_node13(node13);
-					print("To 1st level");		   print("To 2nd level");		  node6.set_link_node14(node8);    node13.set_link_node14(node12);
-					print("To 1st level");		   print("To 2nd level");		  node5.set_link_node15(node63);   node13.set_link_node15(node14);
-					print("To 1st level");		   print("To 2nd level");		  node6.set_link_node16(node110);  node14.set_link_node16(node13);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");		   node9.set_link_node17(node12);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");		   node11.set_link_node18(node14);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");	   	   node9.set_link_node19(node67);
-					print("To 1st level");		   print("To 2nd level");		  print("To 3rd level");	   	   node11.set_link_node20(node11);
+					print("To 1st level");	       node3.set_link_node7(node59);  node8.set_link_node7(node13);    node13.set_link_node7(node21);
+					print("To 1st level");	       node3.set_link_node8(node106); node8.set_link_node8(node14);    node14.set_link_node8(node22);
+					print("To 1st level");	       print("To 2nd level");	      node6.set_link_node9(node5);     node9.set_link_node9(node10);
+					print("To 1st level");	       print("To 2nd level");	      node5.set_link_node10(node6);    node10.set_link_node10(node9);
+					print("To 1st level");	       print("To 2nd level");	      node8.set_link_node11(node7);    node10.set_link_node11(node11);
+					print("To 1st level");	       print("To 2nd level");	      node7.set_link_node12(node8);    node11.set_link_node12(node10);
+					print("To 1st level");	       print("To 2nd level");	      node5.set_link_node13(node7);    node12.set_link_node13(node13);
+					print("To 1st level");	       print("To 2nd level");	      node6.set_link_node14(node8);    node13.set_link_node14(node12);
+					print("To 1st level");	       print("To 2nd level");	      node5.set_link_node15(node63);   node13.set_link_node15(node14);
+					print("To 1st level");	       print("To 2nd level");	      node6.set_link_node16(node110);  node14.set_link_node16(node13);
+					print("To 1st level");	       print("To 2nd level");	      print("To 3rd level");	       node9.set_link_node17(node12);
+					print("To 1st level");	       print("To 2nd level");	      print("To 3rd level");	       node11.set_link_node18(node14);
+					print("To 1st level");	       print("To 2nd level");	      print("To 3rd level");	       node9.set_link_node19(node67);
+					print("To 1st level");	       print("To 2nd level");	      print("To 3rd level");	       node11.set_link_node20(node11);
 
 
 					node15.set_link_node1(node23);   node23.set_link_node1(node33);  node33.set_link_node1(node41);   node41.set_link_node1(node47);
@@ -518,7 +518,7 @@ class AstroNet():
 					node18.set_link_node28(node118); node32.set_link_node28(node40); print("To 7th level");           print("To 8th level");
 					print("To 5th level");           node23.set_link_node29(node28); print("To 7th level");           print("To 8th level");
 					print("To 5th level");           node27.set_link_node30(node32); print("To 7th level");           print("To 8th level");
-					print("To 5th level");			 node23.set_link_node31(node75); print("To 7th level");           print("To 8th level");
+					print("To 5th level");	         node23.set_link_node31(node75); print("To 7th level");           print("To 8th level");
 					print("To 5th level");           node27.set_link_node32(node122);print("To 7th level");           print("To 8th level");
 
 					
@@ -2480,11 +2480,6 @@ class AstroNet():
 
 			print("Instance", current_node.instance)
 
-			# for item in list(set1):
-
-			# 	print("Set item", item)
-
-
 			if len(star_model[1]) <= len(arg1.secondary_memory):
 
 				linked_list.add_conn_between_nodes_star_model()
@@ -2598,20 +2593,6 @@ class AstroNet():
 			print(var)
 
 			current_node = var.head_node
-
-			# print(var.head_node.info)
-
-			# print(current_node.link_node.info)
-
-			# print(current_node.link_node.link_node.info)
-
-			# print(current_node.link_node.link_node.link_node.info)
-
-			# print(current_node.link_node.link_node.link_node.link_node.info)
-
-			# print(current_node.info)
-
-
 		
 			
 			while current_node:
