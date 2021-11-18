@@ -22,7 +22,7 @@ print("Welcome to astro net!")
 print("                                     *                                            ")
 print("                                    * *                                           ")
 print("                                   *   *                                          ")
-print("                                  *     *                                                                    ")
+print("                                  *     *                                         ")
 print("                                 *       *                                        ")
 print("                                *         *                                       ")
 print("                               *           *                                      ")
@@ -2506,78 +2506,9 @@ class AstroNet():
 			#print("Vertex1", current_node.link_node.link_node.link_node.link_node.link_node.link_node.info)
 
 
-
-
-
 			print(len(var_list))
 
 			return linked_list
-
-
-
-			
-			# for item in items_set1:
-
-			# 	for item1 in set1[0]:
-
-			# 		for obj in item1.__dict__:
-
-			# 			if ((obj!= item) and ("_" in obj and "message" in obj) and (obj not in items_set1) and obj!="message"):
-
-			# 				print("Item1", obj)
-
-			# 				set1[1].add(item1)
-
-
-			# print(set1[1])	
-
-			# for item in var_list:	
-
-			# 	for item1 in set1[1]:
-
-			# 		#print(type(item))
-			# 		# print(item1.__class__)
-			# 		# print()
-
-			# 		if item in str(item1.__class__):
-			# 			print("Item",item1.__class__)
-
-			# print()
-
-			# for item in var_list:	
-
-			# 	for item1 in set1[0]:
-
-			# 		#print(type(item))
-			# 		# print(item1.__class__)
-			# 		# print()
-
-			# 		if item in str(item1.__class__):
-			# 			print("Item",item1.__class__)
-
-
-
-
-			# linked_list = AstroNet().Sphere().LinkedList(arg1.value, arg1.info)
-
-			# for item in var_list:
-
-			# 	item = AstroNet().Sphere().HiveCell_f1(info=item)
-
-			# 	linked_list.push(item)
-
-			# print(linked_list.head_node.info)
-
-			# print(linked_list.head_node.link_node.info)
-
-
-			# if len(star_model[1]) <= len(arg1.secondary_memory):
-
-			# 	linked_list.add_conn_between_nodes_star_model()
-
-			# print(len(var_list))
-
-
 
 			
 
@@ -2777,23 +2708,12 @@ class AstroNet():
 			def print_first_level_connections_list(self):
 
 				first_level_connections = []
-				#first_level_connections_coordinates = []
 
 				for item in self.first_level_connections_list: 
 
 					line_edges = item.line_edges()
 					first_level_connections.append(line_edges)
 				print(first_level_connections)
-
-				# for item in range(len(self.first_level_connections_list)):
-
-				# 	first_level_connections.append(self.first_level_connections_list[item])
-
-				# 	for item1 in first_level_connections:
-				# 		first_level_connection_point1 = item1[0]
-				# 		first_level_connection_point2 = item1[1]
-				# 		first_level_connection = [first_level_connection_point1, first_level_connection_point2]
-				# 		first_level_connections.append(first_level_connection)
 
 				
 			def build_second_level_connections_list(self, p1):
@@ -2806,7 +2726,6 @@ class AstroNet():
 			def second_level_connections_list(self):
 
 				second_level_connections = []
-				#first_level_connections_coordinates = []
 
 				for item in self.second_level_connections_list: 
 
@@ -2819,7 +2738,6 @@ class AstroNet():
 			def print_second_level_connections_list(self):
 
 				second_level_connections = []
-				#first_level_connections_coordinates = []
 
 				for item in self.second_level_connections_list: 
 
@@ -2837,7 +2755,6 @@ class AstroNet():
 			def third_level_connections_list(self):
 
 				third_level_connections = []
-				#first_level_connections_coordinates = []
 
 				for item in self.third_level_connections_list: 
 
@@ -2850,7 +2767,6 @@ class AstroNet():
 			def print_third_level_connections_list(self):
 
 				third_level_connections = []
-				#first_level_connections_coordinates = []
 
 				for item in self.third_level_connections_list: 
 
