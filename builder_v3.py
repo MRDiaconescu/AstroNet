@@ -517,9 +517,6 @@ class AstroNet():
 
 				super(AstroNet.Sphere.Account,self).__init__()
 
-				# self.value=value
-
-				# self.info = info
 
 
 
@@ -552,13 +549,6 @@ class AstroNet():
 						self.settings_link2 = settings_link2;
 
 						self.settings_message = settings_message
-
-
-
-						#use super for inheritance of the attributes of a class 
-
-						#super(Account, self).__init__()  
-
 
 
 
