@@ -1420,70 +1420,34 @@ class AstroNet():
 
 						 print(item)
 
-						 print(type(item))
-
 						 for item1 in item:
 
 						 	if type(item1) != list:
 
 							 	if ((item1.profile['date_of_birth'] == date_of_birth) and (item1.profile['country']==country)):
 
-							 		print("Found: ", item1)
+							 		print(item1)
 
-							 		print(1)
 							 		return item1
 
 						 	else:
 
 						 		pass
+							
+							
 
-			def send_message_to_a_friend_from_the_same_network(self, arg1, arg2):
-
-				counter = 0
-
-				if (arg2 in arg1.friends):
-
-					counter+=1
-
-					#arg2=counter
-
-					self.messages.append(self.message_text)
-
-				else:
-
-					print(arg2 + " is not a member of your friends network.")
-					answer =input("Would you like to add " + arg2 + " to your friends network? Type yes or no ")
-
-					print("True")
-
-					if (answer == "yes"):
-
-						arg1.add_friends(arg2, "1992, 7, 7", "NL", "Q")
-
-						print(arg2 + " is now your friend ")
-
-
-				return self.messages
 
 
 			def send_message_to_a_friend_from_the_same_network_f1(self, arg1, arg2):
 
-				counter = 0
-
 				if (arg2.profile['name'] in arg1.friends):
-
-					counter+=1
-
-					#arg2=counter
 
 					self.messages.append(self.message_text)
 
 				else:
 
 					print(arg2.profile['name'] + " is not a member of your friends network.")
-					answer =input("Would you like to add " + arg2.profile['name'] + " to your friends network? Type yes or no ")
-
-					print("True")
+					answer = input("Would you like to add " + arg2.profile['name'] + " to your friends network? Type yes or no ")
 
 					if (answer == "yes"):
 
@@ -1494,12 +1458,6 @@ class AstroNet():
 						arg1.friends.append(friends_list)
 
 						self.messages.append(self.message_text)
-
-
-				print("Messages: ", self.messages)
-
-				print("Friends: ", friends_list)
-
 
 
 				return (self.messages, arg1)
@@ -1634,7 +1592,6 @@ class AstroNet():
 
 							return AstroNet().Sphere().NestCell(self, cell, shell, medium).Gate1().build_the_nest_cell(self, cell, shell, medium)
 
-					#return self.network
 
 					the_hive = NestingHive()
 
