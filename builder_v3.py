@@ -773,10 +773,6 @@ class AstroNet():
 
 
 					def __init__(self, friends_network_link1=1, friends_network_link2=2, ):
-
-						#print(self.friends)
-
-						#to access self.friends from the Friend class
 						
 						AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends)
 
@@ -786,15 +782,9 @@ class AstroNet():
 
 						self.friends_network_message = friends_network_message
 
-						#the attributes of Friend are accessed through the Account class
-
 						print(self.profile['name'])
 
 						self.friends.append(name)
-
-						#self.friends.append(self.profile['name'])
-
-						print("Friends list: ", self.friends)
 
 						for item in self.friends:
 
