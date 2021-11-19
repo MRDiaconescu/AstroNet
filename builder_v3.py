@@ -2044,29 +2044,11 @@ class AstroNet():
 							AstroNet().Sphere().NestCell(cell="cell", shell="shell", medium="medium", link1=1, link2=2, link5=5, link7=7, nestCell_link1=1, nestCell_link2=2, nest_cell_message="NestCell message").Gate2(gate2_link1=1, gate2_link2=2, bridge1=1,bridge2=2, bridge3=3, bridge4=4, bridge5=5, bridge6=6, bridge7=7,
 							bridge8=8,bridge9=9, bridge10=10, bridge11=11, bridge12=12, bridge15=15, bridge17=17, bridge25=25, bridge27=27, gate2_message="Gate2 message")]
 
-			print(var_directed_path1[1].linked_list_message)
-
-			print(var_directed_path[1])
-
-			print(var_list)
 
 
 			items_set = set({})
 			items_set1 = set({})
 
-			for item in var_path:
-
-				for item1 in var_directed_path1:
-
-					for obj in item1.__dict__:
-
-						if obj == item:
-
-							print("obj", obj)
-
-							items_set.add(obj)
-
-			print(items_set)
 
 			for item in var_list:
 
@@ -2076,13 +2058,13 @@ class AstroNet():
 
 						if item.upper() + "_" + "message".upper() == obj.upper():
 
-							print("obj", obj)
+							print(obj)
 
 							items_set1.add(obj)
 
 						if item.upper() == obj.upper():
 
-							print("obj", obj)
+							print(obj)
 
 							items_set1.add(obj)
 
@@ -2092,25 +2074,15 @@ class AstroNet():
 
 				list_items_set1.append(item)
 
-			print("list_items_set1", list_items_set1)
-
 
 			for item1 in  list_items_set1:
 
 				if (("_" not in item1) and (item1 != "message") and  (item1 != "first_message")):
 
 					list_items_set1.remove(item1)
-			print("list_items_set1", list_items_set1)
+					
 
 			items_set1 = list_items_set1
-
-			print("items_set", items_set)
-			print()
-
-			print("items_set1", items_set1)
-			print()
-
-			print(var_list)
 
 			linked_list = AstroNet().Sphere().LinkedList(arg1.value, arg1.info)
 
@@ -2118,6 +2090,7 @@ class AstroNet():
 			set1 = set({})
 
 			for name in var_list:
+				
 				for item in items_set1:
 
 					for item1 in  range(len(var_directed_path1)):
@@ -2128,58 +2101,21 @@ class AstroNet():
 
 								if obj == item:
 
-									print("Found", obj)
+									print(obj)
 
 									set1.add(var_directed_path1[item1])
 
-			print(set1)
-
-
-			print(len(set1))
 
 			linked_list = AstroNet().Sphere().LinkedList(arg1.value, arg1.info)
 
-			# for item1 in list(set1):
-
 			for item in var_list:
 
-				item = AstroNet().Sphere().HiveCell_f1(info=item)#, instance=item1)
-
-				print("instance", item.instance)
+				item = AstroNet().Sphere().HiveCell_f1(info=item)
 
 				linked_list.push(item)
 
 
-			print(linked_list.head_node.info)
-
-			print(linked_list.head_node.link_node.info)
-
-
 			current_node = linked_list.head_node
-
-			print("Current_node:",current_node)
-
-			print("Current_node.value", current_node.value)
-
-			print("Current_node.info", current_node.info)
-
-
-			print("Vertex", current_node.info)
-
-			print("Vertex", current_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.link_node.link_node.info)
-
-			print("Vertex", current_node.link_node.link_node.link_node.link_node.link_node.link_node.info)
-
-
-
 
 
 			for item1 in list(set1):
@@ -2190,35 +2126,15 @@ class AstroNet():
 
 					current_node.instance = item1
 
-					print("Instance",current_node.instance)
-
+					print(current_node.instance)
 
 					break
-
-			print("Instance", current_node.instance)
+					
 
 			if len(star_model[1]) <= len(arg1.secondary_memory):
 
 				linked_list.add_conn_between_nodes_star_model()
 
-			current_node = linked_list.head_node
-
-			print("Vertex1", current_node.info)
-
-			print("Vertex1", current_node.link_node.info)
-
-			print("Vertex1", current_node.link_node.link_node.info)
-
-			print("Vertex1", current_node.link_node.link_node.link_node.info)
-
-			print("Vertex1", current_node.link_node.link_node.link_node.link_node.info)
-
-			#print("Vertex1", current_node.link_node.link_node.link_node.link_node.link_node.info)
-
-			#print("Vertex1", current_node.link_node.link_node.link_node.link_node.link_node.link_node.info)
-
-
-			print(len(var_list))
 
 			return linked_list
 
