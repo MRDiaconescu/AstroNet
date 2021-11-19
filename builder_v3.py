@@ -1345,10 +1345,6 @@ class AstroNet():
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends, arg1, arg2,  friends_network_message="Friends_network message"):
 
-				    print("----------------------------------------------------")
-
-					#check if the arguments match the data of the friends from the same network
-
 				    class Friends_network(AstroNet.Sphere.Friend):
 
 			    		 def __init__(self, friends_network_link1=1, friends_network_link2=2):
@@ -1361,9 +1357,6 @@ class AstroNet():
 
 			    		 	self.friends_network_message = friends_network_message
 
-			    		    #the attributes of Friend are accessed through the Account class
-
-
 			    		 	self.f1 = AstroNet.Sphere.Builder.f1
 
 
@@ -1371,7 +1364,6 @@ class AstroNet():
 
 			    		 		self.friends.append(self.profile['name'])
 
-			    		 		print("Friends list 7: ", self.friends)
 
 			    		 		for item in self.friends:
 
