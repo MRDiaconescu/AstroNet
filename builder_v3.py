@@ -1331,8 +1331,6 @@ class AstroNet():
 
 			def __init__(self, name, date_of_birth, country, friends, first_link1=1, first_link2=2, first_friend_message="First friend message"):
 
-				#the attributes from the __init__ method of account are inherited
-
 				super(AstroNet.Sphere.First,self).__init__(name, date_of_birth, country, friends) 
 
 				self.first_link1 = first_link1;
@@ -1341,11 +1339,8 @@ class AstroNet():
 
 				self.first_friend_message = first_friend_message
 
-				print("**********************************************************")
-
 				print(self.friends)
 
-				print("***********************************************************")
 
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends, arg1, arg2,  friends_network_message="Friends_network message"):
