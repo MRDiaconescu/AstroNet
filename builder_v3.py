@@ -821,6 +821,7 @@ class AstroNet():
 				self.active = user.session
 
 				self.session_link1 = session_link1
+				
 				self.session_link2 = session_link2
 
 				self.session_message = session_message
@@ -985,8 +986,6 @@ class AstroNet():
 			
 			def build_the_friend_network_f1_A(self, arg1, arg2, arg3, arg5):
 
-				print("1st call")
-
 				arg1.friends = arg1.add_friends_from_the_same_network(arg2, arg3, arg5, arg1.friends).friends
 
 				return arg1.add_friends_from_the_same_network(arg1, arg2, arg5, arg1.friends).friends
@@ -994,8 +993,6 @@ class AstroNet():
 
 
 			def build_the_friend_network_f1_1_A(self, arg1, arg2, arg3, arg5):
-
-				print("1st call")
 
 				arg1.friends = arg1.add_friends_from_the_same_network(arg2, arg3, arg5, arg1.friends).friends
 
@@ -1005,8 +1002,6 @@ class AstroNet():
 
 			def build_the_friend_network_f1_B(self, arg1, arg2, arg3, arg5):
 
-				print("1st call")
-
 				arg1.friends = arg1.add_friends(arg2, arg3, arg5, arg1.friends).friends
 
 				return arg1.add_friends(arg1, arg2, arg5, arg1.friends).friends
@@ -1015,11 +1010,9 @@ class AstroNet():
 
 			def instance_f1(self,arg1, arg2, arg3, arg5, arg6, arg7):
 
-				#self.counter += 1
-
 				arg1 = arg2(arg3, arg5, arg6, arg7)
 
-				return  arg1#(self.counter,arg1)
+				return  arg1
 
 
 			def builder_function(self,arg1, arg2, arg3,arg5, arg6):
@@ -1075,36 +1068,6 @@ class AstroNet():
 				return var1.instance_f1(var2, var5, var7, var11, var15, var17)
 
 
-			def create_a_vertex_list(self, arg1):
-
-				var_vertex_list = []
-
-				var_vertex_list.append(arg1[1])
-
-				for item in arg1[1].__dict__['friends']:
-
-					if type(item) ==  list:
-
-						for item1 in item:
-
-							print("Value", item1)
-
-							var_vertex_list.append(item1)
-
-
-					if type(item) != list:
-
-						print("Value1:", item.__dict__)
-
-						var_vertex_list.append(item)
-
-
-
-				return var_vertex_list
-
-
-
-
 
 			def create_a_vertex_list_f1(self, arg1):
 
@@ -1120,25 +1083,23 @@ class AstroNet():
 
 						for item1 in item:
 
-							print("Value", item1)
+							print(item1)
 
 							var_vertex_list.append(item1)
 
 
 					if type(item) != list:
 
-						print("Value1:", item.__dict__)
+						print(item.__dict__)
 
 						var_vertex_list.append(item)
 
-
-				#var_vertex_list1.append(arg1[1])
 
 				for i in var_vertex_list:
 
 					if type(i) == AstroNet.Sphere.AdjVertex:
 
-						print("Vertex", i.__dict__)
+						print(i.__dict__)
 
 						var_vertex_list1.append(i)
 
