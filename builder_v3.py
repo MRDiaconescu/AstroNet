@@ -2142,13 +2142,7 @@ class AstroNet():
 
 
 		def retrieve_data_from_the_hive(self, arg):
-
-			print(self.The_Hive_main_function())
-
-			# print(self.The_Hive_main_function().the_Hive_f1().head_node.value)
-
-			# print(self.The_Hive_main_function().the_Hive_f1().head_node.link_node.value)
-
+			
 			var = self.The_Hive_main_function().the_Hive_f1().HiveCell_f1_1(arg)
 
 			for item in var:
@@ -2164,6 +2158,7 @@ class AstroNet():
 
 			return self.communications_list
 
+		
 		def send_message_using_the_map_f2(self, arg1, arg2, arg3):
 
 			var = self.send_message_using_the_map_f1(arg1, arg2)
@@ -2182,17 +2177,15 @@ class AstroNet():
 
 					if type(var_items[i]) == type(arg3[item]):
 
-						#print(var_items[i])
-
 						print(var[0][i])
 
 						var[0][i] = arg3[item]
 
 			return var
 
+		
 
 		def send_message_using_bridges_f2(self, arg1, arg2, arg3):
-
 
 			var = self.send_message_using_bridges_f1(arg1, arg2)
 
@@ -2202,15 +2195,11 @@ class AstroNet():
 
 				var_items.append(item)
 
-			print(var_items)
-
 			for i in range(len(var_items)):
 
 				for item in range(len(arg3)):
 
 					if type(var_items[i]) == type(arg3[item]):
-
-						#print(var_items[i])
 
 						print(var[0][i])
 
@@ -2223,8 +2212,6 @@ class AstroNet():
 
 			var = self.send_message_using_the_star_model_f1(arg1, arg2)
 
-			print(var)
-
 			current_node = var.head_node
 		
 			
@@ -2232,40 +2219,40 @@ class AstroNet():
 
 				current_node = current_node.link_node
 
-				#print(current_node)
-
 				for item in arg3:
-
-					print(item)
 
 					if current_node:
 
-						print("item", current_node.instance)
-
-						print(current_node)
-
 						if ((type(current_node.instance) == type(item))):
 
-							print("Found", current_node.instance)
+							print(current_node.instance)
 
 							current_node.instance = item
 
 			return var
+		
+		
 
 						
 		class Point():
+			
 			def __init__(self, value):
+				
 				self.point = value
 
 			def __str__(self):
+				
 				return str(self.point)
 
 
 		class Line():
+			
 			def __init__(self, p1, p2):
+				
 				self.line = [p1, p2]
 
 			def __str__(self):
+				
 				return str(self.line)
 
 			def line_edges(self):
@@ -2275,6 +2262,7 @@ class AstroNet():
 				line = [point1, point2]
 
 				return line
+			
 
 			def print_line_edges(self):
 
@@ -2318,6 +2306,7 @@ class AstroNet():
 					first_level_connections.append(line_edges)
 				
 				return first_level_connections
+			
 
 
 			def print_first_level_connections_list(self):
@@ -2331,6 +2320,7 @@ class AstroNet():
 					first_level_connections.append(line_edges)
 					
 				print(first_level_connections)
+				
 
 				
 			def build_second_level_connections_list(self, p1):
@@ -2338,6 +2328,7 @@ class AstroNet():
 				self.second_level_connections_list.append(p1)
 
 				return self.second_level_connections_list
+			
 
 			
 			def second_level_connections_list(self):
@@ -2351,6 +2342,7 @@ class AstroNet():
 					second_level_connections.append(line_edges)
 				
 				return second_level_connections
+			
 
 
 			def print_second_level_connections_list(self):
@@ -2366,11 +2358,14 @@ class AstroNet():
 				print(second_level_connections)
 
 
+				
 			def build_third_level_connections_list(self, p1):
 
 				self.third_level_connections_list.append(p1)
 
 				return self.third_level_connections_list
+			
+			
 
 			def third_level_connections_list(self):
 
@@ -2383,6 +2378,7 @@ class AstroNet():
 					third_level_connections.append(line_edges)
 				
 				return third_level_connections
+			
 
 
 			def print_third_level_connections_list(self):
