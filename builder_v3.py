@@ -811,7 +811,7 @@ class AstroNet():
 
 
 
-
+				
 
 		class Session(Account):
 			def __init__(self, user, session_link1=1, session_link2=2, session_message="Session message"):
@@ -1367,7 +1367,7 @@ class AstroNet():
 
 			    		 		for item in self.friends:
 
-			    		 			print("Item 7:", item)
+			    		 			print(item)
 
 					
 				    friends_network = Friends_network()
@@ -1395,9 +1395,6 @@ class AstroNet():
 
 				self.first_message = first_message
 
-				print(self.friends)
-
-				print(self.messages)
 
 			def add_friend_f1(self):
 
@@ -1406,6 +1403,7 @@ class AstroNet():
 				date_of_birth = date_module.fromisoformat(date_of_birth)
 
 				return date_of_birth
+			
 
 			def add_friend_f1_1(self):
 
