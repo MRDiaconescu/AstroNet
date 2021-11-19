@@ -552,7 +552,6 @@ class AstroNet():
 						self.settings_message = settings_message
 
 
-
 					def edit_privacy_settings(self, arg):
 
 						Settings.settings_var['private_profile'] = arg
@@ -636,7 +635,7 @@ class AstroNet():
 
 				for item in range(len(self.centralized_database)):
 
-					print("Item",item)
+					print(item)
 
 					print(self.centralized_database[item])
 
@@ -656,16 +655,7 @@ class AstroNet():
 
 							self.centralized_database[item][item1] = arg1
 
-
-							#print("list")
-
-						print("Counter", counter)
-
-							
-
-
-
-				#self.centralized_database.append(arg1)
+						print(counter)
 
 				return self.centralized_database
 
