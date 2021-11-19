@@ -1596,6 +1596,7 @@ class AstroNet():
 					the_hive = NestingHive()
 
 					return the_hive
+				
 
 			
 			class Gate2():
@@ -1741,8 +1742,6 @@ class AstroNet():
 
 					var_message = item
 
-					print("Counter", counter)
-
 
 			for item1 in var_path:
 
@@ -1753,8 +1752,6 @@ class AstroNet():
 					print(item1)
 
 					var_message1 = item1
-
-					print("Counter1", counter1)
 
 					counter2=counter1
 
@@ -1768,8 +1765,6 @@ class AstroNet():
 
 			var_path1 = []
 
-			print(counter2)
-
 
 			for item in range(counter2):
 
@@ -1777,10 +1772,9 @@ class AstroNet():
 
 				var_path1.append(var_path[item])
 
-			print(var_path1)
-
 
 			return((arg1, arg2), var_path1)
+		
 
 
 		def send_message_using_the_map_f1(self, arg1, arg2):
