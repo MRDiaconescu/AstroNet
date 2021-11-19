@@ -683,13 +683,6 @@ class AstroNet():
 				super(AstroNet.Sphere.Message,self).__init__(name=arg1.profile['name'], date_of_birth=arg1.profile['date_of_birth'], country=arg1.profile['country'], friends=arg1.friends)
 
 
-				# self.value = value
-
-				# self.info = info
-
-				print(self.friends)
-
-				print(self.messages)
 
 			def send_message_to_a_friend_from_the_same_network(self, arg1, arg2):
 
@@ -720,8 +713,6 @@ class AstroNet():
 
 			def __init__(self, name, date_of_birth, country, friends, friend_link1=1, friend_link2=2, friend_message="Friend message"):
 
-				#the attributes from the __init__ method of account are inherited
-
 				super(AstroNet.Sphere.Friend,self).__init__(name, date_of_birth, country, friends) 
 
 				self.friend_link1 = friend_link1;
@@ -730,26 +721,20 @@ class AstroNet():
 
 				self.friend_message = friend_message
 
-				print("**********************************************************")
-
 				print(self.friends)
 
-				print("***********************************************************")
 
 
 			def add_friends_from_the_same_network(self, name, date_of_birth, country, friends, friends_network_message="Friends network message"):
 
-					#check if the arguments match the data of the friends from the same network
+					#class which calls another class which calls another class
 
+					#using specific attributes from the initial class
 
 					class Friends_network(AstroNet.Sphere.Friend):
 
 
 						def __init__(self, friends_network_link1=1, friends_network_link2=2):
-
-							#print(self.friends)
-
-							#to access self.friends from the Friend class
 							
 							AstroNet.Sphere.Friend.__init__(self, name, date_of_birth, country, friends)
 
@@ -759,13 +744,7 @@ class AstroNet():
 
 							self.friends_network_message = friends_network_message
 
-							#the attributes of Friend are accessed through the Account class
-
-							print(self.profile['name'])
-
 							self.friends.append(self.profile['name'])
-
-							print("Friends list: ", self.friends)
 
 							for item in self.friends:
 
