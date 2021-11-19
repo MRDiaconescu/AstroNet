@@ -1157,48 +1157,36 @@ class AstroNet():
 
 				for item in arg1.create_a_vertex_list_f1(arg2):
 
-					print("****Item****:", item)
-					print("****Item****:", item.__dict__)
+					print(item)
+					print(item.__dict__)
 
 
 					for item1 in  arg1.create_a_vertex_list_f1(arg5):
 
-						print("****item1****", item1)
-						print("****Item1****:", item1.__dict__)
+						print(item1)
+						print(item1.__dict__)
 
 
 						if item.__dict__['vertex']['name'] == item1.__dict__['vertex']['name']:
-
-							print()
-
-							print("^^^^^^^^^^^^^^^^^^^^Item^^^^^^^^^^^^^^^^^^^^", (item.__dict__))
 
 							args_list.append(item)
 
 				var_graph = AstroNet().Sphere().Graph(len(args_list))
 
-				#print("Graph")
-
-				print("Var graph", type(var_graph))
-
 				for item in range(len(args_list)):
 
-				    print("***********Arg*************:", args_list[item].__dict__)
+				    print(args_list[item].__dict__)
 
 				    var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
-				    print("conn", args_list[0].next)
+				    print(args_list[0].next)
 
-				    print("conn1", args_list[0].next.__dict__)
+				    print(args_list[0].next.__dict__)
 
 				    var_graph_list.append(args_list[0].next)
 
 				    var_graph.build_graph(args_list[0].next)
 
-				    #var_graph.graph = var_graph_list
-
-
-				#var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[1])
 
 				return var_graph
 
@@ -1243,15 +1231,11 @@ class AstroNet():
 
 							for friend in item.__dict__['vertex']['friends']:
 
-								print("Friends list1: ", friend)
-
 								var_initial_level.append(("Second level", friend))
 
 						elif 'friends' in item.__dict__:
 
 							for friend in item.__dict__['friends']:
-
-								print("Friends list1_1: ", friend)
 
 								var_initial_level.append(("Second level", friend))
 
@@ -1266,19 +1250,11 @@ class AstroNet():
 
 								var_initial_level.append(("Third level:", item1))
 
-								# for friend1 in item1.__dict__['friends']:
-
-								# 	print("Friends list2: ", friend1)
-
 
 								if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 								and 'friends' not in item1.__dict__):
-
-									print("******")
 											
 									for friend1 in item1.__dict__['vertex']['friends']:
-
-										print("Friends list2: ", friend1)
 
 										var_friends_of_friends.append(friend1)
 
@@ -1287,17 +1263,9 @@ class AstroNet():
 								if ('vertex' in item1.__dict__ and 'friends' in item1.__dict__['vertex'] 
 								and 'friends' in item1.__dict__):
 
-									print("*************")
-
-									print("Len:", len(item1.__dict__['friends']))
-
 									for friend1 in item1.__dict__['friends']:
 
 										if type(friend1) != list:
-
-											print("*******************")
-
-											print("Friends list2:", friend1.__dict__)
 
 											var_friends_of_friends.append(friend1)
 
@@ -1311,8 +1279,6 @@ class AstroNet():
 
 											
 						
-				print("var_initial_level", var_initial_level)
-
 				return  (var_initial_level, var_friends_of_friends)
 
 
