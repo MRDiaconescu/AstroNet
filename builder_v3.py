@@ -546,6 +546,7 @@ class AstroNet():
 						AstroNet.Sphere.Account.__init__(self, name, date_of_birth, country, friends)
 
 						self.settings_link1 = settings_link1;
+						
 						self.settings_link2 = settings_link2;
 
 						self.settings_message = settings_message
@@ -557,10 +558,6 @@ class AstroNet():
 						Settings.settings_var['private_profile'] = arg
 
 						AstroNet.Sphere.Account.settings = self.settings = Settings.settings_var
-
-						print("var1:", AstroNet.Sphere.Account.settings)
-
-						print("var2:", self.settings)
 
 						return AstroNet.Sphere.Account.settings, self.settings
 
