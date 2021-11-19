@@ -1866,8 +1866,6 @@ class AstroNet():
 
 			for item in range(len(var_directed_path[1])):
 
-				#print(var_directed_path1[item].__dict__[var_directed_path[1][item]])
-
 				var_directed_path1[item].__dict__[var_directed_path[1][item]] = var_directed_path[1][0]
 
 				print(var_directed_path1[item].__dict__[var_directed_path[1][item]])
@@ -1915,19 +1913,7 @@ class AstroNet():
 
 			for item in range(len(var_directed_path[1])):
 
-				# for item1 in arg1.primary_memory:
-
-					# if (var_directed_path[1][item].split("_").join(" ").find(item1)):
-
-					# 	print("item", var_directed_path[1][item].find(item1))
-
-					#print(var_directed_path[1][item].split("_"))
-
 					item_list.append(var_directed_path[1][item].split("_"))
-
-			for item1 in range(len(item_list)):
-
-				print("list", item_list[item1])
 
 			for item in range(len(item_list)):
 
@@ -1938,6 +1924,7 @@ class AstroNet():
 					item_list1.append(item1)
 
 			print(item_list1)
+			
 
 			for item in item_list1:
 
@@ -1945,8 +1932,8 @@ class AstroNet():
 
 					if item.upper() in item1.upper():
 
-						print("Item", item)
-						print("Item1", item1)
+						print(item)
+						print(item1)
 
 						set_var_primary.add(item1)
 
@@ -1957,9 +1944,6 @@ class AstroNet():
 						set_var_secondary.add(item1)
 
 
-
-			print(set_var_primary)
-			print(set_var_secondary)
 
 			return (set_var_primary, set_var_secondary)
 
