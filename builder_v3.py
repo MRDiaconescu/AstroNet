@@ -1128,17 +1128,9 @@ class AstroNet():
 
 					var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[item])
 
-					print("conn", args_list[0].next)
-
-					print("conn1", args_list[0].next.__dict__)
-
-					var_graph_list.append(args_list[0].next)
-
-					#var_graph.build_graph(args_list[0].next)
+					var_graph.build_graph(args_list[0].next)
 
 					var_graph.graph = var_graph_list
-
-				#var_graph.add_edge_f1_2(var_graph, args_list[0], args_list[1])
 
 				return (var_graph, var_graph_list)
 
