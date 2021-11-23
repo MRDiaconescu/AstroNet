@@ -2488,9 +2488,7 @@ class AstroNet():
 				line44 = AstroNet().Sphere().Line(varV, varY); line89 = AstroNet().Sphere().Line(varVPrime, varYPrime)
 
 
-
-				#self = AstroNet().Sphere().Polyhedron()
-
+				
 				# second dimension
 
 				self.build_first_level_connections_list(line1); self.build_first_level_connections_list(line45)
@@ -2581,36 +2579,19 @@ class AstroNet():
 				self.name = name
 				self.n = n;
 				super(AstroNet.Sphere.Child,self).__init__()
-		#add specific attributes
-		#check  for a condition?
-		#extend using many factors 
-		#n
+
 			def create_instances_for_two_levels(self):
-				polyhedron1 = AstroNet().Sphere().Polyhedron()   # self.create_the_polyhedron()
+				polyhedron1 = AstroNet().Sphere().Polyhedron()   
 				polyhedron2 = AstroNet().Sphere().Polyhedron()   
 				self.create_the_polyhedron()
 				self.print_first_level_connections_list()
-				#link to parent
-				#link to parent
+				
 			def create_instances_for_three_levels(self):
 				pass
-				#create_instances_for_two_levels
-				#add_one_level
+				
 
 
-		#class n
-		#inherit from child
-		#it has the methods
-		#call class n
-		#use ds to instance of n -> call ds class here
-		#ds class: store, retrieve, reset, exchange, rearrange, reverse(until a point) or completely
-		#1 -> n=2
-
-
-
-
-
-			
+		
 
 
 AstroNet.Sphere.AdjVertex.add_friends_from_the_same_network = AstroNet.Sphere.Friend.add_friends_from_the_same_network
@@ -2638,11 +2619,6 @@ AstroNet.Sphere.Message.send_message_to_a_friend_from_the_same_network = AstroNe
 
 
 
-
-# child = AstroNet().Sphere().Child("B", 2);
-# print(child.polyhedron)
-
-# child.create_the_polyhedron()
 
 
 
