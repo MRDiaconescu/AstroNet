@@ -2627,6 +2627,7 @@ class AstroNet():
 
 				print(self.B_first_level_connections_list_3)
 
+ 				#second level			
 
 				B_second_level_connections_list_3_1 = [item for item in self.B_second_level_connections_list_2]
 				B_second_level_connections_list_3_2 = [item[0] for item in B_second_level_connections_list_3_1]
