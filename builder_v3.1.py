@@ -2581,10 +2581,39 @@ class AstroNet():
 				super(AstroNet.Sphere.Child,self).__init__()
 
 			def create_instances_for_two_levels(self):
-				polyhedron1 = AstroNet().Sphere().Polyhedron()   
-				polyhedron2 = AstroNet().Sphere().Polyhedron()   
-				self.create_the_polyhedron()
-				self.print_first_level_connections_list()
+				B_first_level_connections_list = []
+				B_second_level_connections_list = []
+
+				polyhedron1 = self.create_the_polyhedron()
+				polyhedron2 = AstroNet().Sphere().Polyhedron().create_the_polyhedron()  # self.create_the_polyhedron()
+				polyhedron3 = AstroNet().Sphere().Polyhedron().create_the_polyhedron()
+				print("list")
+				polyhedron1_connections = self.third_level_connections()
+				polyhedron2_connections1 = polyhedron2.first_level_connections()
+				polyhedron2_connections2 = polyhedron2.third_level_connections()
+				polyhedron3_connections1 = polyhedron3.first_level_connections()
+				
+				polyhedron1_connection_points = [item for item in polyhedron1_connections if ((item[1] != "Y") and (item[1] != "Y'"))]
+				polyhedron2_connection1_points = [item for item in polyhedron2_connections1]
+				polyhedron2_connection2_points = [item for item in polyhedron2_connections2 if ((item[1] != "Y") and (item[1] != "Y'"))]
+				polyhedron3_connection1_points = [item for item in polyhedron3_connections1]
+
+				print(polyhedron1_connection_points)
+				print(polyhedron2_connection1_points)
+				print(polyhedron2_connection2_points)
+				print(polyhedron3_connection1_points)
+
+				# 2nd dimension
+
+				for item, item1 in zip(polyhedron1_connection_points, polyhedron2_connection1_points):
+					B_first_level_connections_list.append([item, item1])
+				print(B_first_level_connections_list)
+				print("\n")
+				print("\n")
+
+				for item, item1 in zip(polyhedron2_connection2_points, polyhedron3_connection1_points):
+					B_second_level_connections_list.append([item, item1])
+				print(B_second_level_connections_list)
 				
 			def create_instances_for_three_levels(self):
 				pass
