@@ -2572,10 +2572,9 @@ class AstroNet():
 
 
 
-
 		
-		class Child(Polyhedron):#inherit
-		#instance of parent
+		class Child(Polyhedron):
+		
 			def __init__(self, name, n):
 				self.name = name
 				self.n = n;
