@@ -2295,7 +2295,7 @@ class AstroNet():
 				return self.first_level_connections_list
 			
 
-			def first_level_connections_list(self):
+			def first_level_connections(self):
 
 				first_level_connections = []
 
@@ -2331,7 +2331,7 @@ class AstroNet():
 			
 
 			
-			def second_level_connections_list(self):
+			def second_level_connections(self):
 
 				second_level_connections = []
 
@@ -2367,7 +2367,7 @@ class AstroNet():
 			
 			
 
-			def third_level_connections_list(self):
+			def third_level_connections(self):
 
 				third_level_connections = []
 
