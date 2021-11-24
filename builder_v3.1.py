@@ -2661,13 +2661,16 @@ class AstroNet():
 				
 				#3rd dimension
 
-				B_third_level_connections_2_1 = [item for item in self.B_third_level_connections_2]
-				B_third_level_connections_2_2 = [item[0] for item in B_third_level_connections_2_1]
-				B_third_level_connections_2_3 = [item[1] for item in B_third_level_connections_2_1]
+				B_third_level_connections_3_1 = [item for item in self.B_third_level_connections_2]
+				B_third_level_connections_3_2 = [item[0] for item in B_third_level_connections_3_1]
+				B_third_level_connections_3_3 = [item[1] for item in B_third_level_connections_3_1]
 
-				for item, item1 in zip(B_third_level_connections_2_2, B_third_level_connections_2_3):
+				for item, item1 in zip(B_third_level_connections_3_2, B_third_level_connections_3_3):
 					self.B_third_level_connections_3.append([item[0], item1[0]])
+
 				print(self.B_third_level_connections_3)
+				
+				return self
 
 
 
