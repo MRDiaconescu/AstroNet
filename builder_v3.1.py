@@ -2585,6 +2585,8 @@ class AstroNet():
 				self.B_third_level_connections_2 = []
 				self.B_third_level_connections_3 = []
 				super(AstroNet.Sphere.Child,self).__init__()
+				AstroNet.Sphere.LinkedList.__init__(self, value=True, info=True, linked_list_message="linked_list message")
+
 				
 	
 			def create_instances_for_two_levels(self):
