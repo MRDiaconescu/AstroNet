@@ -2582,6 +2582,8 @@ class AstroNet():
 				self.B_second_level_connections_list_2 = []
 				self.B_first_level_connections_list_3 = []
 				self.B_second_level_connections_list_3 = []
+				self.B_third_level_connections_2 = []
+				self.B_third_level_connections_3 = []
 				super(AstroNet.Sphere.Child,self).__init__()
 				
 	
